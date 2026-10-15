@@ -11,4 +11,6 @@ COPY web/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /src/build /usr/share/nginx/html/web
 COPY curriculum/hub /usr/share/nginx/html/curriculum-hub
 COPY curriculum/site /usr/share/nginx/html/curriculum-site
+# Source files may carry owner-only modes (e.g. synced from iCloud); nginx must read them.
+RUN chmod -R a+rX /usr/share/nginx/html
 EXPOSE 80 8081 8082
