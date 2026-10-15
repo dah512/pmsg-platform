@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Introduction | PMSG Platform: Comprehensive Guide to Pain Management Support Group Informatics</title>
+  <meta name="description" content="A comprehensive technical guide to implementing, using, and extending the Pain Management Support Group (PMSG) platform." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Introduction | PMSG Platform: Comprehensive Guide to Pain Management Support Group Informatics" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="A comprehensive technical guide to implementing, using, and extending the Pain Management Support Group (PMSG) platform." />
+  <meta name="github-repo" content="dah512/pmsg-platform" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Introduction | PMSG Platform: Comprehensive Guide to Pain Management Support Group Informatics" />
+  
+  <meta name="twitter:description" content="A comprehensive technical guide to implementing, using, and extending the Pain Management Support Group (PMSG) platform." />
+  
+
+<meta name="author" content="Darrell A Hall, MD, MSCIS" />
+
+
+<meta name="date" content="2025-12-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="background.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">PMSG Platform Guide</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-this-book"><i class="fa fa-check"></i>About This Book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-pmsg-story"><i class="fa fa-check"></i>The PMSG Story</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-makes-pmsg-different"><i class="fa fa-check"></i>What Makes PMSG Different</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to Use This Book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical-requirements"><i class="fa fa-check"></i>Technical Requirements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#conventions-notation"><i class="fa fa-check"></i>Conventions &amp; Notation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#version-information"><i class="fa fa-check"></i>Version Information</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributing-support"><i class="fa fa-check"></i>Contributing &amp; Support</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-author"><i class="fa fa-check"></i>About the Author</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#the-challenge-of-chronic-pain-management"><i class="fa fa-check"></i><b>1.1</b> The Challenge of Chronic Pain Management</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#the-evidence-base"><i class="fa fa-check"></i><b>1.1.1</b> The Evidence Base</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#enter-the-pmsg-platform"><i class="fa fa-check"></i><b>1.2</b> Enter the PMSG Platform</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#core-philosophy"><i class="fa fa-check"></i><b>1.2.1</b> Core Philosophy</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#what-pmsg-provides"><i class="fa fa-check"></i><b>1.2.2</b> What PMSG Provides</a></li>
+<li class="chapter" data-level="1.2.3" data-path="intro.html"><a href="intro.html#technical-architecture-overview"><i class="fa fa-check"></i><b>1.2.3</b> Technical Architecture Overview</a></li>
+<li class="chapter" data-level="1.2.4" data-path="intro.html"><a href="intro.html#data-flow-example"><i class="fa fa-check"></i><b>1.2.4</b> Data Flow Example</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#use-cases-and-applications"><i class="fa fa-check"></i><b>1.3</b> Use Cases and Applications</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="intro.html"><a href="intro.html#use-case-1-clinical-program-management"><i class="fa fa-check"></i><b>1.3.1</b> Use Case 1: Clinical Program Management</a></li>
+<li class="chapter" data-level="1.3.2" data-path="intro.html"><a href="intro.html#use-case-2-clinical-research-study"><i class="fa fa-check"></i><b>1.3.2</b> Use Case 2: Clinical Research Study</a></li>
+<li class="chapter" data-level="1.3.3" data-path="intro.html"><a href="intro.html#use-case-3-quality-improvement-initiative"><i class="fa fa-check"></i><b>1.3.3</b> Use Case 3: Quality Improvement Initiative</a></li>
+<li class="chapter" data-level="1.3.4" data-path="intro.html"><a href="intro.html#use-case-4-grant-application"><i class="fa fa-check"></i><b>1.3.4</b> Use Case 4: Grant Application</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#system-requirements"><i class="fa fa-check"></i><b>1.4</b> System Requirements</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#minimum-requirements"><i class="fa fa-check"></i><b>1.4.1</b> Minimum Requirements</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#software-dependencies"><i class="fa fa-check"></i><b>1.4.2</b> Software Dependencies</a></li>
+<li class="chapter" data-level="1.4.3" data-path="intro.html"><a href="intro.html#network-requirements"><i class="fa fa-check"></i><b>1.4.3</b> Network Requirements</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#getting-started"><i class="fa fa-check"></i><b>1.5</b> Getting Started</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#quick-start-development"><i class="fa fa-check"></i><b>1.5.1</b> Quick Start (Development)</a></li>
+<li class="chapter" data-level="1.5.2" data-path="intro.html"><a href="intro.html#docker-quick-start"><i class="fa fa-check"></i><b>1.5.2</b> Docker Quick Start</a></li>
+<li class="chapter" data-level="1.5.3" data-path="intro.html"><a href="intro.html#first-steps"><i class="fa fa-check"></i><b>1.5.3</b> First Steps</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#book-organization"><i class="fa fa-check"></i><b>1.6</b> Book Organization</a></li>
+<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#summary"><i class="fa fa-check"></i><b>1.7</b> Summary</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2</b> Pain Management Background</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="background.html"><a href="background.html#the-chronic-pain-epidemic"><i class="fa fa-check"></i><b>2.1</b> The Chronic Pain Epidemic</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="background.html"><a href="background.html#epidemiology"><i class="fa fa-check"></i><b>2.1.1</b> Epidemiology</a></li>
+<li class="chapter" data-level="2.1.2" data-path="background.html"><a href="background.html#economic-impact"><i class="fa fa-check"></i><b>2.1.2</b> Economic Impact</a></li>
+<li class="chapter" data-level="2.1.3" data-path="background.html"><a href="background.html#patient-impact"><i class="fa fa-check"></i><b>2.1.3</b> Patient Impact</a></li>
+<li class="chapter" data-level="2.1.4" data-path="background.html"><a href="background.html#the-opioid-crisis-connection"><i class="fa fa-check"></i><b>2.1.4</b> The Opioid Crisis Connection</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="background.html"><a href="background.html#evidence-based-pain-management"><i class="fa fa-check"></i><b>2.2</b> Evidence-Based Pain Management</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="background.html"><a href="background.html#the-biopsychosocial-model"><i class="fa fa-check"></i><b>2.2.1</b> The Biopsychosocial Model</a></li>
+<li class="chapter" data-level="2.2.2" data-path="background.html"><a href="background.html#multidisciplinary-pain-programs"><i class="fa fa-check"></i><b>2.2.2</b> Multidisciplinary Pain Programs</a></li>
+<li class="chapter" data-level="2.2.3" data-path="background.html"><a href="background.html#evidence-for-effectiveness"><i class="fa fa-check"></i><b>2.2.3</b> Evidence for Effectiveness</a></li>
+<li class="chapter" data-level="2.2.4" data-path="background.html"><a href="background.html#barriers-to-implementation"><i class="fa fa-check"></i><b>2.2.4</b> Barriers to Implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="background.html"><a href="background.html#assessment-instruments"><i class="fa fa-check"></i><b>2.3</b> Assessment Instruments</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="background.html"><a href="background.html#brief-pain-inventory-bpi"><i class="fa fa-check"></i><b>2.3.1</b> Brief Pain Inventory (BPI)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="background.html"><a href="background.html#oswestry-disability-index-odi"><i class="fa fa-check"></i><b>2.3.2</b> Oswestry Disability Index (ODI)</a></li>
+<li class="chapter" data-level="2.3.3" data-path="background.html"><a href="background.html#other-common-measures"><i class="fa fa-check"></i><b>2.3.3</b> Other Common Measures</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="background.html"><a href="background.html#program-models-and-formats"><i class="fa fa-check"></i><b>2.4</b> Program Models and Formats</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="background.html"><a href="background.html#intensive-inpatient-programs"><i class="fa fa-check"></i><b>2.4.1</b> Intensive Inpatient Programs</a></li>
+<li class="chapter" data-level="2.4.2" data-path="background.html"><a href="background.html#intensive-outpatient-programs"><i class="fa fa-check"></i><b>2.4.2</b> Intensive Outpatient Programs</a></li>
+<li class="chapter" data-level="2.4.3" data-path="background.html"><a href="background.html#standard-outpatient-programs"><i class="fa fa-check"></i><b>2.4.3</b> Standard Outpatient Programs</a></li>
+<li class="chapter" data-level="2.4.4" data-path="background.html"><a href="background.html#telehealth-and-hybrid-models"><i class="fa fa-check"></i><b>2.4.4</b> Telehealth and Hybrid Models</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="background.html"><a href="background.html#key-takeaways"><i class="fa fa-check"></i><b>2.5</b> Key Takeaways</a></li>
+<li class="chapter" data-level="" data-path="background.html"><a href="background.html#references-1"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="architecture.html"><a href="architecture.html"><i class="fa fa-check"></i><b>3</b> Platform Architecture</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="architecture.html"><a href="architecture.html#overview"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="architecture.html"><a href="architecture.html#technology-stack"><i class="fa fa-check"></i><b>3.2</b> Technology Stack</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="architecture.html"><a href="architecture.html#frontend-stack"><i class="fa fa-check"></i><b>3.2.1</b> Frontend Stack</a></li>
+<li class="chapter" data-level="3.2.2" data-path="architecture.html"><a href="architecture.html#backend-stack"><i class="fa fa-check"></i><b>3.2.2</b> Backend Stack</a></li>
+<li class="chapter" data-level="3.2.3" data-path="architecture.html"><a href="architecture.html#analytics-stack"><i class="fa fa-check"></i><b>3.2.3</b> Analytics Stack</a></li>
+<li class="chapter" data-level="3.2.4" data-path="architecture.html"><a href="architecture.html#aiml-stack"><i class="fa fa-check"></i><b>3.2.4</b> AI/ML Stack</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="architecture.html"><a href="architecture.html#system-components"><i class="fa fa-check"></i><b>3.3</b> System Components</a></li>
+<li class="chapter" data-level="3.4" data-path="architecture.html"><a href="architecture.html#api-design"><i class="fa fa-check"></i><b>3.4</b> API Design</a></li>
+<li class="chapter" data-level="3.5" data-path="architecture.html"><a href="architecture.html#database-schema"><i class="fa fa-check"></i><b>3.5</b> Database Schema</a></li>
+<li class="chapter" data-level="3.6" data-path="architecture.html"><a href="architecture.html#security-architecture"><i class="fa fa-check"></i><b>3.6</b> Security Architecture</a></li>
+<li class="chapter" data-level="" data-path="architecture.html"><a href="architecture.html#references-2"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/yourusername/pmsg-platform" target="blank">View Source Code</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PMSG Platform: Comprehensive Guide to Pain Management Support Group Informatics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="the-challenge-of-chronic-pain-management" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> The Challenge of Chronic Pain Management<a href="intro.html#the-challenge-of-chronic-pain-management" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Chronic pain affects more than 100 million Americans, with annual costs exceeding $600 billion in healthcare expenses and lost productivity <span class="citation">(<a href="#ref-IOM2011">Institute of Medicine 2011</a>)</span>. Despite decades of research demonstrating the effectiveness of multidisciplinary pain management programs, implementation remains inconsistent, data collection fragmented, and outcomes poorly tracked.</p>
+<p>The fundamental challenges include:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Standardization Gap</strong>: Lack of consistent assessment tools and workflows</li>
+<li><strong>Data Silos</strong>: Information trapped in incompatible systems</li>
+<li><strong>Real-time Insights</strong>: Limited ability to monitor patient progress dynamically</li>
+<li><strong>Evidence Generation</strong>: Difficulty producing research-quality data from clinical practice</li>
+<li><strong>Scalability</strong>: Programs that work in research settings fail in real-world implementation</li>
+</ol>
+<div id="the-evidence-base" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> The Evidence Base<a href="intro.html#the-evidence-base" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Multidisciplinary pain management programs have Level 1 evidence for effectiveness <span class="citation">(<a href="#ref-Gatchel2014">Gatchel et al. 2014</a>; <a href="#ref-Kamper2015">Kamper et al. 2015</a>)</span>. Meta-analyses consistently show:</p>
+<ul>
+<li><strong>Pain Reduction</strong>: 2-3 point decrease on 0-10 scale (Cohen’s d = 0.5-0.8)</li>
+<li><strong>Function Improvement</strong>: 15-20% increase in daily activities</li>
+<li><strong>Opioid Reduction</strong>: 30-40% decrease in opioid consumption</li>
+<li><strong>Cost-Effectiveness</strong>: $2,500-7,000 per QALY gained</li>
+<li><strong>Sustained Benefits</strong>: Effects maintained at 12-month follow-up</li>
+</ul>
+<p>However, these results come from controlled research settings. Real-world implementation faces barriers:</p>
+<ul>
+<li>Inconsistent assessment administration</li>
+<li>Incomplete data capture</li>
+<li>Delayed or absent outcome analysis</li>
+<li>Limited feedback loops</li>
+<li>Difficulty demonstrating value to payers</li>
+</ul>
+</div>
+</div>
+<div id="enter-the-pmsg-platform" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Enter the PMSG Platform<a href="intro.html#enter-the-pmsg-platform" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <strong>Pain Management Support Group (PMSG) Platform</strong> addresses these challenges through a comprehensive clinical informatics solution that brings research-quality data collection and analysis to everyday clinical practice.</p>
+<div id="core-philosophy" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Core Philosophy<a href="intro.html#core-philosophy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The PMSG platform is built on four foundational principles:</p>
+<p><strong>1. Clinical Validity First</strong></p>
+<p>Every feature starts with clinical evidence:
+- Pre-validated assessment instruments (BPI, ODI)
+- Evidence-based outcome thresholds
+- Clinical workflows informed by practice guidelines
+- CONSORT-compliant data structures</p>
+<p><strong>2. Practical Usability</strong></p>
+<p>Technology serves clinicians and patients, not vice versa:
+- Intuitive interfaces requiring minimal training
+- Workflows that match clinical reality
+- Mobile-friendly for point-of-care use
+- Graceful handling of real-world messiness</p>
+<p><strong>3. Analytical Rigor</strong></p>
+<p>Data quality suitable for peer-reviewed publication:
+- Proper statistical methods with documented assumptions
+- Effect sizes and confidence intervals, not just p-values
+- Missing data handling and sensitivity analyses
+- Reproducible analysis with versioned code</p>
+<p><strong>4. Modular Extensibility</strong></p>
+<p>Components work together but function independently:
+- RESTful APIs with comprehensive documentation
+- Microservices architecture for scalability
+- Open standards for interoperability
+- Plugin architecture for customization</p>
+</div>
+<div id="what-pmsg-provides" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> What PMSG Provides<a href="intro.html#what-pmsg-provides" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The platform consists of six integrated systems:</p>
+<div id="core-clinical-platform" class="section level4 hasAnchor" number="1.2.2.1">
+<h4><span class="header-section-number">1.2.2.1</span> 1. Core Clinical Platform<a href="intro.html#core-clinical-platform" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Purpose</strong>: Day-to-day program operation</p>
+<p><strong>Components</strong>:
+- Patient registration with demographic data
+- BPI (Brief Pain Inventory) assessment administration
+- ODI (Oswestry Disability Index) for functional status<br />
+- Session attendance tracking
+- Automated scoring with clinical interpretation</p>
+<p><strong>Output</strong>: Real-time dashboards, alerts, clinical summaries</p>
+</div>
+<div id="analytics-engine" class="section level4 hasAnchor" number="1.2.2.2">
+<h4><span class="header-section-number">1.2.2.2</span> 2. Analytics Engine<a href="intro.html#analytics-engine" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Purpose</strong>: Descriptive and inferential statistics</p>
+<p><strong>Components</strong>:
+- Pain trajectory analysis with confidence intervals
+- Cohort comparison with statistical tests
+- Outcome distribution and categorization
+- Attendance pattern analysis
+- Individual participant progress tracking</p>
+<p><strong>Output</strong>: Interactive visualizations, statistical reports</p>
+</div>
+<div id="rag-system" class="section level4 hasAnchor" number="1.2.2.3">
+<h4><span class="header-section-number">1.2.2.3</span> 3. RAG System<a href="intro.html#rag-system" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Purpose</strong>: AI-powered knowledge integration</p>
+<p><strong>Components</strong>:
+- Document ingestion (PDFs, DOCX, TXT, MD)
+- Semantic chunking and embedding (768-dimensional vectors)
+- ChromaDB vector database for similarity search
+- Claude AI integration for question answering
+- Citation generation in multiple formats (APA, MLA, Chicago, Vancouver)</p>
+<p><strong>Output</strong>: Contextual answers with source attribution</p>
+</div>
+<div id="predictive-analytics" class="section level4 hasAnchor" number="1.2.2.4">
+<h4><span class="header-section-number">1.2.2.4</span> 4. Predictive Analytics<a href="intro.html#predictive-analytics" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Purpose</strong>: Risk stratification and forecasting</p>
+<p><strong>Components</strong>:
+- Linear regression and mixed effects models
+- Random Forest and Gradient Boosting
+- Generalized Additive Models (GAMs)
+- Individual risk scores
+- Program-level predictions</p>
+<p><strong>Output</strong>: Risk stratification, dropout prediction, intervention optimization</p>
+</div>
+<div id="r-shiny-analytics-suite" class="section level4 hasAnchor" number="1.2.2.5">
+<h4><span class="header-section-number">1.2.2.5</span> 5. R Shiny Analytics Suite<a href="intro.html#r-shiny-analytics-suite" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Purpose</strong>: Advanced statistical analysis and reporting</p>
+<p><strong>Components</strong>:
+- 9-tab comprehensive dashboard
+- 8+ statistical tests (parametric and non-parametric)
+- Survival analysis with Kaplan-Meier and Cox models
+- Machine learning model comparison
+- Automated report generation (PDF, HTML, Word)</p>
+<p><strong>Output</strong>: Publication-ready figures, tables, and reports</p>
+</div>
+<div id="reporting-system" class="section level4 hasAnchor" number="1.2.2.6">
+<h4><span class="header-section-number">1.2.2.6</span> 6. Reporting System<a href="intro.html#reporting-system" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Purpose</strong>: Automated documentation and dissemination</p>
+<p><strong>Components</strong>:
+- Customizable report templates
+- Scheduled report generation
+- Multi-format export (PDF, DOCX, HTML, CSV, PPTX)
+- Executive summaries with key metrics
+- Grant application support</p>
+<p><strong>Output</strong>: Professional reports for diverse audiences</p>
+</div>
+</div>
+<div id="technical-architecture-overview" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Technical Architecture Overview<a href="intro.html#technical-architecture-overview" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The PMSG platform uses a modern, scalable architecture:</p>
+<p><strong>Frontend Layer</strong>:
+- <strong>React 18.2</strong>: Modern component-based UI
+- <strong>Recharts</strong>: Interactive data visualizations
+- <strong>Tailwind CSS</strong>: Responsive, healing-centered design
+- <strong>JWT Authentication</strong>: Secure session management</p>
+<p><strong>Backend Layer</strong>:
+- <strong>FastAPI</strong>: High-performance Python async framework
+- <strong>PostgreSQL 12+</strong>: Robust relational database
+- <strong>Alembic</strong>: Database migration management
+- <strong>Pydantic</strong>: Data validation and serialization</p>
+<p><strong>Analytics Layer</strong>:
+- <strong>R 4.0+</strong>: Statistical computing environment
+- <strong>Shiny</strong>: Interactive web applications
+- <strong>ggplot2</strong>: Publication-quality graphics
+- <strong>lme4, survival</strong>: Advanced statistical models</p>
+<p><strong>AI Layer</strong>:
+- <strong>ChromaDB</strong>: Vector database for semantic search
+- <strong>Sentence-Transformers</strong>: Text embedding models
+- <strong>LangChain</strong>: RAG orchestration framework
+- <strong>Claude API</strong>: Advanced language model integration</p>
+<p><strong>Deployment Layer</strong>:
+- <strong>Docker</strong>: Containerization for consistency
+- <strong>Nginx</strong>: Reverse proxy and load balancing
+- <strong>Let’s Encrypt</strong>: SSL/TLS certificates
+- <strong>GitHub Actions</strong>: CI/CD pipeline</p>
+</div>
+<div id="data-flow-example" class="section level3 hasAnchor" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Data Flow Example<a href="intro.html#data-flow-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s trace a typical patient assessment through the system:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="intro.html#cb1-1" tabindex="-1"></a><span class="co"># 1. Patient completes BPI assessment (React frontend)</span></span>
+<span id="cb1-2"><a href="intro.html#cb1-2" tabindex="-1"></a><span class="co"># Frontend sends POST request to /api/assessments/bpi</span></span>
+<span id="cb1-3"><a href="intro.html#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="intro.html#cb1-4" tabindex="-1"></a><span class="co"># 2. Backend validates and stores (FastAPI)</span></span>
+<span id="cb1-5"><a href="intro.html#cb1-5" tabindex="-1"></a>bpi_data <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb1-6"><a href="intro.html#cb1-6" tabindex="-1"></a>  <span class="at">participant_id =</span> <span class="st">&quot;P001&quot;</span>,</span>
+<span id="cb1-7"><a href="intro.html#cb1-7" tabindex="-1"></a>  <span class="at">week =</span> <span class="dv">1</span>,</span>
+<span id="cb1-8"><a href="intro.html#cb1-8" tabindex="-1"></a>  <span class="at">pain_questions =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">5</span>),  <span class="co"># 7 pain items</span></span>
+<span id="cb1-9"><a href="intro.html#cb1-9" tabindex="-1"></a>  <span class="at">interference_questions =</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>)  <span class="co"># 7 interference items</span></span>
+<span id="cb1-10"><a href="intro.html#cb1-10" tabindex="-1"></a>)</span>
+<span id="cb1-11"><a href="intro.html#cb1-11" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="intro.html#cb1-12" tabindex="-1"></a><span class="co"># 3. Automatic scoring</span></span>
+<span id="cb1-13"><a href="intro.html#cb1-13" tabindex="-1"></a>bpi_scores <span class="ot">&lt;-</span> <span class="fu">calculate_bpi_scores</span>(bpi_data)</span>
+<span id="cb1-14"><a href="intro.html#cb1-14" tabindex="-1"></a><span class="co"># Returns: avg_pain = 5.9, worst_pain = 8.0, </span></span>
+<span id="cb1-15"><a href="intro.html#cb1-15" tabindex="-1"></a><span class="co">#          pain_interference = 5.6, severity_index = 6.5</span></span>
+<span id="cb1-16"><a href="intro.html#cb1-16" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="intro.html#cb1-17" tabindex="-1"></a><span class="co"># 4. Store in PostgreSQL with proper relationships</span></span>
+<span id="cb1-18"><a href="intro.html#cb1-18" tabindex="-1"></a><span class="co"># Triggers: check for alerts (pain &gt; 7), update dashboards</span></span>
+<span id="cb1-19"><a href="intro.html#cb1-19" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="intro.html#cb1-20" tabindex="-1"></a><span class="co"># 5. Analytics engine incorporates new data</span></span>
+<span id="cb1-21"><a href="intro.html#cb1-21" tabindex="-1"></a><span class="co"># Updates: trajectory plots, cohort statistics, predictions</span></span>
+<span id="cb1-22"><a href="intro.html#cb1-22" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="intro.html#cb1-23" tabindex="-1"></a><span class="co"># 6. R Shiny dashboard refreshes</span></span>
+<span id="cb1-24"><a href="intro.html#cb1-24" tabindex="-1"></a><span class="co"># Shows: updated pain trends, statistical tests, visualizations</span></span>
+<span id="cb1-25"><a href="intro.html#cb1-25" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="intro.html#cb1-26" tabindex="-1"></a><span class="co"># 7. Weekly report generation</span></span>
+<span id="cb1-27"><a href="intro.html#cb1-27" tabindex="-1"></a><span class="co"># Includes: this assessment in automated summaries</span></span></code></pre></div>
+<p>This flow demonstrates several key principles:</p>
+<ul>
+<li><strong>Immediate Validation</strong>: Data quality checked at entry</li>
+<li><strong>Automated Processing</strong>: No manual calculation errors</li>
+<li><strong>Real-time Updates</strong>: Dashboards reflect current state</li>
+<li><strong>Research Quality</strong>: Data immediately available for analysis</li>
+<li><strong>Audit Trail</strong>: Every transaction logged for compliance</li>
+</ul>
+</div>
+</div>
+<div id="use-cases-and-applications" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Use Cases and Applications<a href="intro.html#use-cases-and-applications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="use-case-1-clinical-program-management" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Use Case 1: Clinical Program Management<a href="intro.html#use-case-1-clinical-program-management" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Scenario</strong>: A hospital-based pain clinic runs 8-week multidisciplinary programs with 20 patients per cohort.</p>
+<p><strong>PMSG Solution</strong>:
+- Weekly BPI/ODI assessments administered via tablet
+- Real-time dashboard shows individual and cohort progress
+- Alerts notify clinicians of concerning trends (pain increase, missed sessions)
+- Monthly reports demonstrate outcomes to hospital administration</p>
+<p><strong>Impact</strong>:
+- 85% completion rate (up from 60%)
+- Average pain reduction of 3.2 points
+- Documentation time reduced by 50%
+- Payer reports generated automatically</p>
+</div>
+<div id="use-case-2-clinical-research-study" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Use Case 2: Clinical Research Study<a href="intro.html#use-case-2-clinical-research-study" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Scenario</strong>: A randomized controlled trial comparing two intervention approaches, targeting N=100 participants.</p>
+<p><strong>PMSG Solution</strong>:
+- Randomization and allocation concealment built-in
+- Standardized data collection ensuring consistency
+- Real-time monitoring for data quality and adverse events
+- CONSORT diagram generation
+- Statistical analysis with proper methods
+- Manuscript-ready tables and figures</p>
+<p><strong>Impact</strong>:
+- Faster recruitment (clear protocols)
+- Higher data quality (validation at entry)
+- Easier IRB reporting (automated summaries)
+- Accelerated publication (analysis ready)</p>
+</div>
+<div id="use-case-3-quality-improvement-initiative" class="section level3 hasAnchor" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Use Case 3: Quality Improvement Initiative<a href="intro.html#use-case-3-quality-improvement-initiative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Scenario</strong>: A clinic wants to benchmark performance and identify improvement opportunities.</p>
+<p><strong>PMSG Solution</strong>:
+- Cohort comparison across time periods
+- Process metrics (attendance, assessment completion)
+- Outcome metrics (pain reduction, functional improvement)
+- Statistical tests identifying significant changes
+- Root cause analysis with granular data</p>
+<p><strong>Impact</strong>:
+- Identified optimal group size (12-15 participants)
+- Refined session timing (morning vs. afternoon)
+- Targeted interventions for at-risk patients
+- 25% improvement in outcomes over 18 months</p>
+</div>
+<div id="use-case-4-grant-application" class="section level3 hasAnchor" number="1.3.4">
+<h3><span class="header-section-number">1.3.4</span> Use Case 4: Grant Application<a href="intro.html#use-case-4-grant-application" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Scenario</strong>: A researcher is preparing an R01 application for a novel intervention.</p>
+<p><strong>PMSG Solution</strong>:
+- Preliminary data from existing program
+- Power calculations based on observed effect sizes
+- Budget justification with productivity metrics
+- Innovation narrative with technology integration
+- Feasibility demonstration</p>
+<p><strong>Impact</strong>:
+- Strong preliminary data section
+- Realistic sample size calculations
+- Credible timeline and milestones
+- Successful funding (&gt;90th percentile impact score)</p>
+</div>
+</div>
+<div id="system-requirements" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> System Requirements<a href="intro.html#system-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="minimum-requirements" class="section level3 hasAnchor" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> Minimum Requirements<a href="intro.html#minimum-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Development Environment</strong>:
+- CPU: 4 cores, 2.0 GHz
+- RAM: 8 GB
+- Storage: 50 GB SSD
+- OS: Ubuntu 20.04+, macOS 11+, Windows 10+</p>
+<p><strong>Production Environment (Small Practice)</strong>:
+- CPU: 8 cores, 2.5 GHz
+- RAM: 16 GB
+- Storage: 500 GB SSD
+- OS: Ubuntu 20.04 LTS (recommended)
+- Network: 100 Mbps symmetric</p>
+<p><strong>Production Environment (Research Institution)</strong>:
+- CPU: 16 cores, 3.0 GHz
+- RAM: 32 GB
+- Storage: 1 TB NVMe SSD
+- OS: Ubuntu 20.04 LTS
+- Network: 1 Gbps symmetric</p>
+</div>
+<div id="software-dependencies" class="section level3 hasAnchor" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> Software Dependencies<a href="intro.html#software-dependencies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Backend</strong>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="intro.html#cb2-1" tabindex="-1"></a><span class="ex">Python</span> 3.9+</span>
+<span id="cb2-2"><a href="intro.html#cb2-2" tabindex="-1"></a><span class="ex">PostgreSQL</span> 12+</span>
+<span id="cb2-3"><a href="intro.html#cb2-3" tabindex="-1"></a><span class="ex">Redis</span> 6+ <span class="er">(</span><span class="ex">optional,</span> for caching<span class="kw">)</span></span></code></pre></div>
+<p><strong>Frontend</strong>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="intro.html#cb3-1" tabindex="-1"></a><span class="ex">Node.js</span> 16+</span>
+<span id="cb3-2"><a href="intro.html#cb3-2" tabindex="-1"></a><span class="ex">npm</span> 8+</span></code></pre></div>
+<p><strong>Analytics</strong>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="intro.html#cb4-1" tabindex="-1"></a>R <span class="fl">4.0</span><span class="sc">+</span></span>
+<span id="cb4-2"><a href="intro.html#cb4-2" tabindex="-1"></a>RStudio <span class="fl">2022.07</span><span class="sc">+</span> (recommended)</span></code></pre></div>
+<p><strong>Deployment</strong>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="intro.html#cb5-1" tabindex="-1"></a><span class="ex">Docker</span> 20+</span>
+<span id="cb5-2"><a href="intro.html#cb5-2" tabindex="-1"></a><span class="ex">docker-compose</span> 1.29+</span>
+<span id="cb5-3"><a href="intro.html#cb5-3" tabindex="-1"></a><span class="ex">nginx</span> 1.18+ <span class="er">(</span><span class="ex">production</span><span class="kw">)</span></span></code></pre></div>
+</div>
+<div id="network-requirements" class="section level3 hasAnchor" number="1.4.3">
+<h3><span class="header-section-number">1.4.3</span> Network Requirements<a href="intro.html#network-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Firewall Rules</strong>:
+- Port 80 (HTTP) - redirects to HTTPS
+- Port 443 (HTTPS) - main application
+- Port 5432 (PostgreSQL) - internal only
+- Port 3838 (Shiny) - internal only</p>
+<p><strong>SSL/TLS</strong>:
+- TLS 1.2 minimum
+- Modern cipher suites only
+- HSTS enabled
+- Certificate auto-renewal</p>
+</div>
+</div>
+<div id="getting-started" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Getting Started<a href="intro.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quick-start-development" class="section level3 hasAnchor" number="1.5.1">
+<h3><span class="header-section-number">1.5.1</span> Quick Start (Development)<a href="intro.html#quick-start-development" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The fastest way to get started:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="intro.html#cb6-1" tabindex="-1"></a><span class="co"># 1. Clone the repository</span></span>
+<span id="cb6-2"><a href="intro.html#cb6-2" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/yourusername/pmsg-platform.git</span>
+<span id="cb6-3"><a href="intro.html#cb6-3" tabindex="-1"></a><span class="bu">cd</span> pmsg-platform</span>
+<span id="cb6-4"><a href="intro.html#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="intro.html#cb6-5" tabindex="-1"></a><span class="co"># 2. Start the backend</span></span>
+<span id="cb6-6"><a href="intro.html#cb6-6" tabindex="-1"></a><span class="bu">cd</span> backend</span>
+<span id="cb6-7"><a href="intro.html#cb6-7" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span>
+<span id="cb6-8"><a href="intro.html#cb6-8" tabindex="-1"></a><span class="ex">python</span> init_db.py  <span class="co"># Initialize database</span></span>
+<span id="cb6-9"><a href="intro.html#cb6-9" tabindex="-1"></a><span class="ex">uvicorn</span> main:app <span class="at">--reload</span></span>
+<span id="cb6-10"><a href="intro.html#cb6-10" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="intro.html#cb6-11" tabindex="-1"></a><span class="co"># 3. Start the frontend (new terminal)</span></span>
+<span id="cb6-12"><a href="intro.html#cb6-12" tabindex="-1"></a><span class="bu">cd</span> frontend</span>
+<span id="cb6-13"><a href="intro.html#cb6-13" tabindex="-1"></a><span class="ex">npm</span> install</span>
+<span id="cb6-14"><a href="intro.html#cb6-14" tabindex="-1"></a><span class="ex">npm</span> start</span>
+<span id="cb6-15"><a href="intro.html#cb6-15" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="intro.html#cb6-16" tabindex="-1"></a><span class="co"># 4. Start R Shiny analytics (new terminal)</span></span>
+<span id="cb6-17"><a href="intro.html#cb6-17" tabindex="-1"></a><span class="bu">cd</span> analytics</span>
+<span id="cb6-18"><a href="intro.html#cb6-18" tabindex="-1"></a><span class="ex">Rscript</span> install_packages.R</span>
+<span id="cb6-19"><a href="intro.html#cb6-19" tabindex="-1"></a><span class="ex">R</span> <span class="at">-e</span> <span class="st">&quot;shiny::runApp()&quot;</span></span></code></pre></div>
+<p>Your application will be available at:
+- Frontend: <a href="http://localhost:3000" class="uri">http://localhost:3000</a>
+- Backend API: <a href="http://localhost:8000" class="uri">http://localhost:8000</a>
+- API Docs: <a href="http://localhost:8000/docs" class="uri">http://localhost:8000/docs</a>
+- R Shiny: <a href="http://localhost:3838" class="uri">http://localhost:3838</a></p>
+</div>
+<div id="docker-quick-start" class="section level3 hasAnchor" number="1.5.2">
+<h3><span class="header-section-number">1.5.2</span> Docker Quick Start<a href="intro.html#docker-quick-start" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Even faster with Docker:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="intro.html#cb7-1" tabindex="-1"></a><span class="co"># Clone repository</span></span>
+<span id="cb7-2"><a href="intro.html#cb7-2" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/yourusername/pmsg-platform.git</span>
+<span id="cb7-3"><a href="intro.html#cb7-3" tabindex="-1"></a><span class="bu">cd</span> pmsg-platform</span>
+<span id="cb7-4"><a href="intro.html#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="intro.html#cb7-5" tabindex="-1"></a><span class="co"># Start everything</span></span>
+<span id="cb7-6"><a href="intro.html#cb7-6" tabindex="-1"></a><span class="ex">docker-compose</span> up <span class="at">-d</span></span>
+<span id="cb7-7"><a href="intro.html#cb7-7" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="intro.html#cb7-8" tabindex="-1"></a><span class="co"># Check status</span></span>
+<span id="cb7-9"><a href="intro.html#cb7-9" tabindex="-1"></a><span class="ex">docker-compose</span> ps</span>
+<span id="cb7-10"><a href="intro.html#cb7-10" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="intro.html#cb7-11" tabindex="-1"></a><span class="co"># View logs</span></span>
+<span id="cb7-12"><a href="intro.html#cb7-12" tabindex="-1"></a><span class="ex">docker-compose</span> logs <span class="at">-f</span></span></code></pre></div>
+<p>Access the same URLs as above. Docker handles all dependencies automatically.</p>
+</div>
+<div id="first-steps" class="section level3 hasAnchor" number="1.5.3">
+<h3><span class="header-section-number">1.5.3</span> First Steps<a href="intro.html#first-steps" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once running, here’s your checklist:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Create Admin User</strong>:
+<ul>
+<li>Navigate to <a href="http://localhost:3000/admin" class="uri">http://localhost:3000/admin</a></li>
+<li>Use default credentials (change immediately!)</li>
+<li>Create your admin account</li>
+</ul></li>
+<li><strong>Configure Settings</strong>:
+<ul>
+<li>Set organization name</li>
+<li>Configure email notifications</li>
+<li>Set assessment schedules</li>
+<li>Define cohort structure</li>
+</ul></li>
+<li><strong>Add Test Data</strong>:
+<ul>
+<li>Run: <code>python generate_sample_data.py</code></li>
+<li>Creates 25 participants with 8 weeks of data</li>
+<li>Useful for exploring features</li>
+</ul></li>
+<li><strong>Explore Dashboards</strong>:
+<ul>
+<li>Main dashboard: Overview metrics</li>
+<li>Analytics: Statistical analysis</li>
+<li>Reports: Generate sample reports</li>
+<li>R Shiny: Advanced analytics</li>
+</ul></li>
+<li><strong>Review Documentation</strong>:
+<ul>
+<li>API docs: <a href="http://localhost:8000/docs" class="uri">http://localhost:8000/docs</a></li>
+<li>This book: Continue reading!</li>
+<li>Video tutorials: (link to come)</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="book-organization" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Book Organization<a href="intro.html#book-organization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The remaining chapters are organized as follows:</p>
+<p><strong>Part I: Foundation &amp; Theory</strong> continues with:
+- Chapter 2: Pain Management Background
+- Chapter 3: Platform Architecture</p>
+<p><strong>Part II: Clinical Implementation</strong> covers:
+- Chapter 4: Installation and Setup
+- Chapter 5: Patient Registration and Assessment
+- Chapter 6: Clinical Dashboard Usage</p>
+<p><strong>Part III: Analytics &amp; Research</strong> explores:
+- Chapter 7: Descriptive Analytics
+- Chapter 8: Statistical Analysis Methods
+- Chapter 9: Predictive Analytics and ML
+- Chapter 10: Survival Analysis</p>
+<p><strong>Part IV: Advanced Features</strong> details:
+- Chapter 11: RAG System and AI Integration
+- Chapter 12: Automated Report Generation
+- Chapter 13: R Shiny Analytics Suite</p>
+<p><strong>Part V: Administration &amp; Operations</strong> explains:
+- Chapter 14: Data Management and Security
+- Chapter 15: User Management and Support</p>
+<p><strong>Part VI: Research Applications</strong> provides:
+- Chapter 16: Grant Writing Support
+- Chapter 17: Publication Preparation
+- Chapter 18: Quality Improvement Applications</p>
+</div>
+<div id="summary" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> Summary<a href="intro.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The PMSG platform represents a paradigm shift in pain management informatics:</p>
+<ul>
+<li><strong>Evidence-Based</strong>: Built on validated clinical tools and workflows</li>
+<li><strong>Production-Ready</strong>: Suitable for real-world clinical and research use</li>
+<li><strong>Analytically Rigorous</strong>: Statistical methods appropriate for publication</li>
+<li><strong>AI-Enhanced</strong>: Modern ML/AI capabilities integrated thoughtfully</li>
+<li><strong>Openly Documented</strong>: Complete transparency in methods and code</li>
+<li><strong>Continuously Improved</strong>: Active development with user feedback</li>
+</ul>
+<p>Whether you’re a clinician seeking better tools, a researcher pursuing rigorous evidence, or a developer building healthcare solutions, the PMSG platform provides a solid foundation.</p>
+<p>Let’s dive deeper into the clinical background and rationale in Chapter 2.</p>
+</div>
+<div id="references" class="section level2 unnumbered hasAnchor">
+<h2>References<a href="intro.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="refs-intro">
+
+</div>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Gatchel2014" class="csl-entry">
+Gatchel, Robert J, Donald D McGeary, Cindy A McGeary, and Brian Lippe. 2014. <span>“Interdisciplinary Chronic Pain Management: Past, Present, and Future.”</span> <em>American Psychologist</em> 69 (2): 119–30.
+</div>
+<div id="ref-IOM2011" class="csl-entry">
+Institute of Medicine. 2011. <span>“Relieving Pain in America: A Blueprint for Transforming Prevention, Care, Education, and Research.”</span> <em>Washington, DC: The National Academies Press</em>.
+</div>
+<div id="ref-Kamper2015" class="csl-entry">
+Kamper, Steven J, Adri T Apeldoorn, Alessandro Chiarotto, et al. 2015. <span>“Multidisciplinary Biopsychosocial Rehabilitation for Chronic Low Back Pain: Cochrane Systematic Review and Meta-Analysis.”</span> <em>Bmj</em> 350.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="background.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": "linkedin"
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["pmsg_platform_guide.pdf", "pmsg_platform_guide.epub", "pmsg_platform_guide.mobi"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

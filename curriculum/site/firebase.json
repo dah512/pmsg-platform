@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      { "source": "/about", "destination": "/pages/about.html" },
+      { "source": "/resources", "destination": "/pages/resources.html" },
+      { "source": "/meetings", "destination": "/pages/meetings.html" },
+      { "source": "/contact", "destination": "/pages/contact.html" }
+    ]
+  }
+}

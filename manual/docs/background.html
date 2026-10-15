@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Pain Management Background | PMSG Platform: Comprehensive Guide to Pain Management Support Group Informatics</title>
+  <meta name="description" content="A comprehensive technical guide to implementing, using, and extending the Pain Management Support Group (PMSG) platform - a world-class clinical informatics system for evidence-based chronic pain management." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Pain Management Background | PMSG Platform: Comprehensive Guide to Pain Management Support Group Informatics" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://pmsg-platform.org/images/pmsg_cover.png" />
+  <meta property="og:description" content="A comprehensive technical guide to implementing, using, and extending the Pain Management Support Group (PMSG) platform - a world-class clinical informatics system for evidence-based chronic pain management." />
+  <meta name="github-repo" content="yourusername/pmsg-platform" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Pain Management Background | PMSG Platform: Comprehensive Guide to Pain Management Support Group Informatics" />
+  
+  <meta name="twitter:description" content="A comprehensive technical guide to implementing, using, and extending the Pain Management Support Group (PMSG) platform - a world-class clinical informatics system for evidence-based chronic pain management." />
+  <meta name="twitter:image" content="https://pmsg-platform.org/images/pmsg_cover.png" />
+
+<meta name="author" content="Darrell A. Henderson, MD, MS" />
+<meta name="author" content="Clinical Informatician &amp; Bioengineering Researcher" />
+
+
+<meta name="date" content="2025-12-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="architecture.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">PMSG Platform Guide</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-this-book"><i class="fa fa-check"></i>About This Book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-pmsg-story"><i class="fa fa-check"></i>The PMSG Story</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-makes-pmsg-different"><i class="fa fa-check"></i>What Makes PMSG Different</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to Use This Book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical-requirements"><i class="fa fa-check"></i>Technical Requirements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#conventions-notation"><i class="fa fa-check"></i>Conventions &amp; Notation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#version-information"><i class="fa fa-check"></i>Version Information</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributing-support"><i class="fa fa-check"></i>Contributing &amp; Support</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-author"><i class="fa fa-check"></i>About the Author</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#the-challenge-of-chronic-pain-management"><i class="fa fa-check"></i><b>1.1</b> The Challenge of Chronic Pain Management</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#the-evidence-base"><i class="fa fa-check"></i><b>1.1.1</b> The Evidence Base</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#enter-the-pmsg-platform"><i class="fa fa-check"></i><b>1.2</b> Enter the PMSG Platform</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#core-philosophy"><i class="fa fa-check"></i><b>1.2.1</b> Core Philosophy</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#what-pmsg-provides"><i class="fa fa-check"></i><b>1.2.2</b> What PMSG Provides</a></li>
+<li class="chapter" data-level="1.2.3" data-path="intro.html"><a href="intro.html#technical-architecture-overview"><i class="fa fa-check"></i><b>1.2.3</b> Technical Architecture Overview</a></li>
+<li class="chapter" data-level="1.2.4" data-path="intro.html"><a href="intro.html#data-flow-example"><i class="fa fa-check"></i><b>1.2.4</b> Data Flow Example</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#use-cases-and-applications"><i class="fa fa-check"></i><b>1.3</b> Use Cases and Applications</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="intro.html"><a href="intro.html#use-case-1-clinical-program-management"><i class="fa fa-check"></i><b>1.3.1</b> Use Case 1: Clinical Program Management</a></li>
+<li class="chapter" data-level="1.3.2" data-path="intro.html"><a href="intro.html#use-case-2-clinical-research-study"><i class="fa fa-check"></i><b>1.3.2</b> Use Case 2: Clinical Research Study</a></li>
+<li class="chapter" data-level="1.3.3" data-path="intro.html"><a href="intro.html#use-case-3-quality-improvement-initiative"><i class="fa fa-check"></i><b>1.3.3</b> Use Case 3: Quality Improvement Initiative</a></li>
+<li class="chapter" data-level="1.3.4" data-path="intro.html"><a href="intro.html#use-case-4-grant-application"><i class="fa fa-check"></i><b>1.3.4</b> Use Case 4: Grant Application</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#system-requirements"><i class="fa fa-check"></i><b>1.4</b> System Requirements</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#minimum-requirements"><i class="fa fa-check"></i><b>1.4.1</b> Minimum Requirements</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#software-dependencies"><i class="fa fa-check"></i><b>1.4.2</b> Software Dependencies</a></li>
+<li class="chapter" data-level="1.4.3" data-path="intro.html"><a href="intro.html#network-requirements"><i class="fa fa-check"></i><b>1.4.3</b> Network Requirements</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#getting-started"><i class="fa fa-check"></i><b>1.5</b> Getting Started</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#quick-start-development"><i class="fa fa-check"></i><b>1.5.1</b> Quick Start (Development)</a></li>
+<li class="chapter" data-level="1.5.2" data-path="intro.html"><a href="intro.html#docker-quick-start"><i class="fa fa-check"></i><b>1.5.2</b> Docker Quick Start</a></li>
+<li class="chapter" data-level="1.5.3" data-path="intro.html"><a href="intro.html#first-steps"><i class="fa fa-check"></i><b>1.5.3</b> First Steps</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#book-organization"><i class="fa fa-check"></i><b>1.6</b> Book Organization</a></li>
+<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#summary"><i class="fa fa-check"></i><b>1.7</b> Summary</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2</b> Pain Management Background</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="background.html"><a href="background.html#the-chronic-pain-epidemic"><i class="fa fa-check"></i><b>2.1</b> The Chronic Pain Epidemic</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="background.html"><a href="background.html#epidemiology"><i class="fa fa-check"></i><b>2.1.1</b> Epidemiology</a></li>
+<li class="chapter" data-level="2.1.2" data-path="background.html"><a href="background.html#economic-impact"><i class="fa fa-check"></i><b>2.1.2</b> Economic Impact</a></li>
+<li class="chapter" data-level="2.1.3" data-path="background.html"><a href="background.html#patient-impact"><i class="fa fa-check"></i><b>2.1.3</b> Patient Impact</a></li>
+<li class="chapter" data-level="2.1.4" data-path="background.html"><a href="background.html#the-opioid-crisis-connection"><i class="fa fa-check"></i><b>2.1.4</b> The Opioid Crisis Connection</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="background.html"><a href="background.html#evidence-based-pain-management"><i class="fa fa-check"></i><b>2.2</b> Evidence-Based Pain Management</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="background.html"><a href="background.html#the-biopsychosocial-model"><i class="fa fa-check"></i><b>2.2.1</b> The Biopsychosocial Model</a></li>
+<li class="chapter" data-level="2.2.2" data-path="background.html"><a href="background.html#multidisciplinary-pain-programs"><i class="fa fa-check"></i><b>2.2.2</b> Multidisciplinary Pain Programs</a></li>
+<li class="chapter" data-level="2.2.3" data-path="background.html"><a href="background.html#evidence-for-effectiveness"><i class="fa fa-check"></i><b>2.2.3</b> Evidence for Effectiveness</a></li>
+<li class="chapter" data-level="2.2.4" data-path="background.html"><a href="background.html#barriers-to-implementation"><i class="fa fa-check"></i><b>2.2.4</b> Barriers to Implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="background.html"><a href="background.html#assessment-instruments"><i class="fa fa-check"></i><b>2.3</b> Assessment Instruments</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="background.html"><a href="background.html#brief-pain-inventory-bpi"><i class="fa fa-check"></i><b>2.3.1</b> Brief Pain Inventory (BPI)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="background.html"><a href="background.html#oswestry-disability-index-odi"><i class="fa fa-check"></i><b>2.3.2</b> Oswestry Disability Index (ODI)</a></li>
+<li class="chapter" data-level="2.3.3" data-path="background.html"><a href="background.html#other-common-measures"><i class="fa fa-check"></i><b>2.3.3</b> Other Common Measures</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="background.html"><a href="background.html#program-models-and-formats"><i class="fa fa-check"></i><b>2.4</b> Program Models and Formats</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="background.html"><a href="background.html#intensive-inpatient-programs"><i class="fa fa-check"></i><b>2.4.1</b> Intensive Inpatient Programs</a></li>
+<li class="chapter" data-level="2.4.2" data-path="background.html"><a href="background.html#intensive-outpatient-programs"><i class="fa fa-check"></i><b>2.4.2</b> Intensive Outpatient Programs</a></li>
+<li class="chapter" data-level="2.4.3" data-path="background.html"><a href="background.html#standard-outpatient-programs"><i class="fa fa-check"></i><b>2.4.3</b> Standard Outpatient Programs</a></li>
+<li class="chapter" data-level="2.4.4" data-path="background.html"><a href="background.html#telehealth-and-hybrid-models"><i class="fa fa-check"></i><b>2.4.4</b> Telehealth and Hybrid Models</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="background.html"><a href="background.html#key-takeaways"><i class="fa fa-check"></i><b>2.5</b> Key Takeaways</a></li>
+<li class="chapter" data-level="" data-path="background.html"><a href="background.html#references-1"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="architecture.html"><a href="architecture.html"><i class="fa fa-check"></i><b>3</b> Platform Architecture</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="architecture.html"><a href="architecture.html#overview"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="architecture.html"><a href="architecture.html#technology-stack"><i class="fa fa-check"></i><b>3.2</b> Technology Stack</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="architecture.html"><a href="architecture.html#frontend-stack"><i class="fa fa-check"></i><b>3.2.1</b> Frontend Stack</a></li>
+<li class="chapter" data-level="3.2.2" data-path="architecture.html"><a href="architecture.html#backend-stack"><i class="fa fa-check"></i><b>3.2.2</b> Backend Stack</a></li>
+<li class="chapter" data-level="3.2.3" data-path="architecture.html"><a href="architecture.html#analytics-stack"><i class="fa fa-check"></i><b>3.2.3</b> Analytics Stack</a></li>
+<li class="chapter" data-level="3.2.4" data-path="architecture.html"><a href="architecture.html#aiml-stack"><i class="fa fa-check"></i><b>3.2.4</b> AI/ML Stack</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="architecture.html"><a href="architecture.html#system-components"><i class="fa fa-check"></i><b>3.3</b> System Components</a></li>
+<li class="chapter" data-level="3.4" data-path="architecture.html"><a href="architecture.html#api-design"><i class="fa fa-check"></i><b>3.4</b> API Design</a></li>
+<li class="chapter" data-level="3.5" data-path="architecture.html"><a href="architecture.html#database-schema"><i class="fa fa-check"></i><b>3.5</b> Database Schema</a></li>
+<li class="chapter" data-level="3.6" data-path="architecture.html"><a href="architecture.html#security-architecture"><i class="fa fa-check"></i><b>3.6</b> Security Architecture</a></li>
+<li class="chapter" data-level="" data-path="architecture.html"><a href="architecture.html#references-2"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/yourusername/pmsg-platform" target="blank">View Source Code</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PMSG Platform: Comprehensive Guide to Pain Management Support Group Informatics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="background" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Pain Management Background<a href="background.html#background" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="the-chronic-pain-epidemic" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> The Chronic Pain Epidemic<a href="background.html#the-chronic-pain-epidemic" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Chronic pain, defined as pain lasting more than 3 months, represents one of the most significant healthcare challenges of our time. Understanding its scope, impact, and evidence-based management approaches is essential context for the PMSG platform.</p>
+<div id="epidemiology" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Epidemiology<a href="background.html#epidemiology" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Prevalence</strong>:
+- <strong>United States</strong>: 100 million adults (≈40% of population) <span class="citation">(<a href="#ref-IOM2011">Institute of Medicine 2011</a>)</span>
+- <strong>Global</strong>: 1.5 billion people worldwide <span class="citation">(<a href="#ref-Goldberg2011">Goldberg and McGee 2011</a>)</span>
+- <strong>Age-related</strong>: Increases from 20% (ages 18-34) to 65% (ages 75+)
+- <strong>Gender disparity</strong>: Women 1.5x more likely than men</p>
+<strong>Common Conditions</strong>:
+<table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:pain-conditions">Table 2.1: </span><span id="tab:pain-conditions">Table 2.2: </span>Common Chronic Pain Conditions
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Condition
+</th>
+<th style="text-align:right;">
+Prevalence (%)
+</th>
+<th style="text-align:right;">
+Annual Cost ($B)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Low Back Pain
+</td>
+<td style="text-align:right;">
+28.0
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Arthritis
+</td>
+<td style="text-align:right;">
+25.0
+</td>
+<td style="text-align:right;">
+128
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Headache/Migraine
+</td>
+<td style="text-align:right;">
+16.0
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Neuropathic Pain
+</td>
+<td style="text-align:right;">
+8.0
+</td>
+<td style="text-align:right;">
+28
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fibromyalgia
+</td>
+<td style="text-align:right;">
+4.0
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Complex Regional Pain
+</td>
+<td style="text-align:right;">
+0.5
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="economic-impact" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Economic Impact<a href="background.html#economic-impact" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Institute of Medicine estimates annual costs at $560-635 billion <span class="citation">(<a href="#ref-IOM2011">Institute of Medicine 2011</a>)</span>:</p>
+<p><strong>Direct Healthcare Costs</strong>: $261-300 billion
+- Emergency department visits: 51 million/year
+- Physician visits: 83 million/year
+- Hospitalizations: 26 million days/year
+- Medications: $32 billion/year
+- Procedures: $58 billion/year</p>
+<p><strong>Indirect Costs</strong>: $299-335 billion
+- Lost productivity: $260 billion
+- Disability payments: $39 billion
+- Workers compensation: $36 billion</p>
+<p><strong>Comparison to Other Conditions</strong>:
+- Heart disease: $309 billion
+- Cancer: $243 billion
+- Diabetes: $188 billion</p>
+<p>Chronic pain costs exceed these major conditions, yet receives fraction of research funding and clinical infrastructure.</p>
+</div>
+<div id="patient-impact" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Patient Impact<a href="background.html#patient-impact" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Beyond economics, chronic pain profoundly affects quality of life:</p>
+<p><strong>Physical Function</strong>:
+- 42% report severe limitations in daily activities
+- 38% unable to work or work reduced hours
+- 26% report difficulty with self-care</p>
+<p><strong>Mental Health</strong>:
+- Depression: 35-45% prevalence (vs. 7% general population)
+- Anxiety: 30-40% prevalence (vs. 18% general population)
+- PTSD: 15-30% in trauma-related pain
+- Suicide risk: 2-3x higher</p>
+<p><strong>Social Impact</strong>:
+- Family strain reported by 62%
+- Social isolation in 48%
+- Reduced recreational activities: 71%
+- Financial stress: 58%</p>
+</div>
+<div id="the-opioid-crisis-connection" class="section level3 hasAnchor" number="2.1.4">
+<h3><span class="header-section-number">2.1.4</span> The Opioid Crisis Connection<a href="background.html#the-opioid-crisis-connection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Chronic pain management became entangled with prescription opioid epidemic:</p>
+<p><strong>Timeline</strong>:
+- <strong>1990s</strong>: Pain as “5th vital sign” campaign
+- <strong>1996</strong>: OxyContin released, aggressively marketed
+- <strong>2000-2010</strong>: Opioid prescriptions tripled
+- <strong>2010-present</strong>: Escalating overdose deaths</p>
+<p><strong>Current Statistics</strong>:
+- 17,000+ prescription opioid deaths/year
+- 2 million Americans with opioid use disorder
+- 80% of heroin users started with prescriptions
+- $78 billion annual economic burden</p>
+<p><strong>Policy Response</strong>:
+- CDC Opioid Prescribing Guidelines (2016, updated 2022)
+- State prescription drug monitoring programs (PDMPs)
+- Mandatory prescriber education
+- Restrictions on initial prescriptions
+- Focus on non-opioid alternatives</p>
+<p>This crisis underscores need for evidence-based, multidisciplinary approaches that don’t rely primarily on medications.</p>
+</div>
+</div>
+<div id="evidence-based-pain-management" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Evidence-Based Pain Management<a href="background.html#evidence-based-pain-management" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-biopsychosocial-model" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> The Biopsychosocial Model<a href="background.html#the-biopsychosocial-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Modern pain science recognizes chronic pain as a complex biopsychosocial phenomenon, not purely biomedical <span class="citation">(<a href="#ref-Gatchel2007">Gatchel et al. 2007</a>)</span>.</p>
+<p><strong>Biological Factors</strong>:
+- Tissue injury and inflammation
+- Central sensitization
+- Genetic predisposition
+- Neuroplastic changes</p>
+<p><strong>Psychological Factors</strong>:
+- Pain catastrophizing
+- Fear-avoidance beliefs
+- Depression and anxiety
+- Coping strategies</p>
+<p><strong>Social Factors</strong>:
+- Family dynamics
+- Work environment
+- Cultural beliefs about pain
+- Healthcare system interactions</p>
+<p><strong>Implications for Treatment</strong>:
+- Single-modality treatment insufficient
+- Must address multiple domains simultaneously
+- Interdisciplinary approach required
+- Patient education essential</p>
+</div>
+<div id="multidisciplinary-pain-programs" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Multidisciplinary Pain Programs<a href="background.html#multidisciplinary-pain-programs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Multidisciplinary pain management programs (MPPs) emerged as gold standard <span class="citation">(<a href="#ref-Gatchel2014">Gatchel et al. 2014</a>)</span>:</p>
+<p><strong>Core Components</strong>:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Medical Management</strong>
+<ul>
+<li>Appropriate medication optimization</li>
+<li>Interventional procedures (when indicated)</li>
+<li>Comorbidity treatment</li>
+</ul></li>
+<li><strong>Physical Rehabilitation</strong>
+<ul>
+<li>Functional restoration</li>
+<li>Graded exercise programs</li>
+<li>Movement re-education</li>
+<li>Work conditioning</li>
+</ul></li>
+<li><strong>Psychological Treatment</strong>
+<ul>
+<li>Cognitive-Behavioral Therapy (CBT)</li>
+<li>Acceptance and Commitment Therapy (ACT)</li>
+<li>Mindfulness-based interventions</li>
+<li>Biofeedback and relaxation</li>
+</ul></li>
+<li><strong>Occupational Therapy</strong>
+<ul>
+<li>Activity pacing</li>
+<li>Ergonomic assessment</li>
+<li>Adaptive equipment</li>
+<li>Return-to-work planning</li>
+</ul></li>
+<li><strong>Patient Education</strong>
+<ul>
+<li>Pain neuroscience education</li>
+<li>Self-management skills</li>
+<li>Medication safety</li>
+<li>Lifestyle modification</li>
+</ul></li>
+</ol>
+<p><strong>Program Structure</strong>:
+- <strong>Intensive</strong>: 40+ hours/week for 2-4 weeks
+- <strong>Standard</strong>: 10-20 hours/week for 6-12 weeks
+- <strong>Maintenance</strong>: Monthly follow-up for 6-12 months</p>
+</div>
+<div id="evidence-for-effectiveness" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Evidence for Effectiveness<a href="background.html#evidence-for-effectiveness" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Meta-analyses consistently demonstrate MPP effectiveness:</p>
+<p><strong>Kamper et al. (2015)</strong> - Cochrane Review <span class="citation">(<a href="#ref-Kamper2015">Kamper et al. 2015</a>)</span>:
+- 41 RCTs, 6,858 participants
+- <strong>Pain</strong>: SMD -0.51 (95% CI: -0.69 to -0.33) at completion
+- <strong>Pain</strong>: SMD -0.41 (95% CI: -0.62 to -0.20) at long-term follow-up
+- <strong>Function</strong>: SMD -0.68 (95% CI: -0.89 to -0.47) at completion
+- <strong>Function</strong>: SMD -0.35 (95% CI: -0.57 to -0.13) at long-term follow-up</p>
+<p><strong>Interpretation</strong>:
+- Moderate-to-large effects on pain and function
+- Effects sustained at 6-12 month follow-up
+- Superior to usual care and single-modality treatment
+- Number needed to treat (NNT) = 3-4</p>
+<p><strong>Gatchel et al. (2014)</strong> - Best Practices Review <span class="citation">(<a href="#ref-Gatchel2014">Gatchel et al. 2014</a>)</span>:
+- Level 1 evidence for chronic low back pain
+- Return-to-work rates: 60-85% (vs. 20-40% usual care)
+- Cost-effectiveness: $2,500-7,000 per QALY
+- Opioid reduction: 30-50% in program completers</p>
+<p><strong>Key Findings Across Studies</strong>:</p>
+<table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:evidence-table">Table 2.3: </span><span id="tab:evidence-table">Table 2.4: </span>Summary of MPP Evidence
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Outcome Domain
+</th>
+<th style="text-align:center;">
+Effect Size
+</th>
+<th style="text-align:center;">
+Duration of Effect
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Pain Intensity
+</td>
+<td style="text-align:center;">
+Medium (d=0.4-0.6)
+</td>
+<td style="text-align:center;">
+6-12 months
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Physical Function
+</td>
+<td style="text-align:center;">
+Medium-Large (d=0.5-0.8)
+</td>
+<td style="text-align:center;">
+6-12 months
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Emotional Function
+</td>
+<td style="text-align:center;">
+Medium (d=0.4-0.6)
+</td>
+<td style="text-align:center;">
+6-12 months
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Return to Work
+</td>
+<td style="text-align:center;">
+Large (RR=2.5-4.0)
+</td>
+<td style="text-align:center;">
+6-12 months
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Healthcare Utilization
+</td>
+<td style="text-align:center;">
+Large (30-50% reduction)
+</td>
+<td style="text-align:center;">
+12-24 months
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Opioid Use
+</td>
+<td style="text-align:center;">
+Large (30-40% reduction)
+</td>
+<td style="text-align:center;">
+6-12 months
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="barriers-to-implementation" class="section level3 hasAnchor" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> Barriers to Implementation<a href="background.html#barriers-to-implementation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Despite strong evidence, MPPs remain underutilized <span class="citation">(<a href="#ref-Gatchel2014">Gatchel et al. 2014</a>)</span>:</p>
+<p><strong>System-Level Barriers</strong>:
+- Fragmented healthcare delivery
+- Fee-for-service reimbursement favoring procedures
+- Limited insurance coverage for interdisciplinary care
+- Geographic maldistribution of programs
+- High startup costs</p>
+<p><strong>Clinic-Level Barriers</strong>:
+- Difficulty coordinating multiple disciplines
+- Scheduling complexity
+- Documentation burden
+- Staff training requirements
+- Quality assurance challenges</p>
+<p><strong>Patient-Level Barriers</strong>:
+- Transportation difficulties
+- Work/family obligations
+- Cost concerns
+- Limited understanding of chronic pain
+- Skepticism about non-medication approaches</p>
+<p><strong>Data and Measurement Barriers</strong>:
+- Inconsistent outcome measures
+- Lack of standardized data collection
+- Poor integration with EMR systems
+- Limited real-time feedback
+- Difficulty demonstrating value</p>
+<p><strong>The PMSG Solution</strong>:</p>
+<p>The PMSG platform directly addresses these barriers through:
+- Standardized workflows reducing coordination complexity
+- Automated data collection minimizing documentation burden
+- Real-time dashboards enabling quality assurance
+- Evidence generation for payer negotiations
+- Scalable technology reducing per-patient costs</p>
+</div>
+</div>
+<div id="assessment-instruments" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Assessment Instruments<a href="background.html#assessment-instruments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Standardized, validated assessment instruments are essential for tracking outcomes and comparing across programs.</p>
+<div id="brief-pain-inventory-bpi" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Brief Pain Inventory (BPI)<a href="background.html#brief-pain-inventory-bpi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The BPI is the most widely used multidimensional pain assessment tool <span class="citation">(<a href="#ref-Cleeland1994">Cleeland and Ryan 1994</a>)</span>.</p>
+<p><strong>Structure</strong>:
+- <strong>Pain Severity</strong>: 4 items (worst, least, average, current pain)
+- <strong>Pain Interference</strong>: 7 items (general activity, mood, walking, work, relationships, sleep, enjoyment of life)
+- <strong>Rating Scale</strong>: 0-10 numeric scale (0 = no pain/interference, 10 = worst imaginable)</p>
+<p><strong>Scoring</strong>:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="background.html#cb11-1" tabindex="-1"></a><span class="co"># Pain Severity Score (PSS)</span></span>
+<span id="cb11-2"><a href="background.html#cb11-2" tabindex="-1"></a>PSS <span class="ot">=</span> <span class="fu">mean</span>(worst_pain, least_pain, average_pain, current_pain)</span>
+<span id="cb11-3"><a href="background.html#cb11-3" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="background.html#cb11-4" tabindex="-1"></a><span class="co"># Pain Interference Score (PIS)</span></span>
+<span id="cb11-5"><a href="background.html#cb11-5" tabindex="-1"></a>PIS <span class="ot">=</span> <span class="fu">mean</span>(interference_1, interference_2, ..., interference_7)</span>
+<span id="cb11-6"><a href="background.html#cb11-6" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="background.html#cb11-7" tabindex="-1"></a><span class="co"># Composite Severity Index</span></span>
+<span id="cb11-8"><a href="background.html#cb11-8" tabindex="-1"></a>severity_index <span class="ot">=</span> (PSS <span class="sc">+</span> PIS) <span class="sc">/</span> <span class="dv">2</span></span></code></pre></div>
+<p><strong>Interpretation</strong>:
+- <strong>Mild Pain</strong>: PSS &lt; 4
+- <strong>Moderate Pain</strong>: PSS 4-6
+- <strong>Severe Pain</strong>: PSS &gt; 6</p>
+<ul>
+<li><strong>Mild Interference</strong>: PIS &lt; 3</li>
+<li><strong>Moderate Interference</strong>: PIS 3-6<br />
+</li>
+<li><strong>Severe Interference</strong>: PIS &gt; 6</li>
+</ul>
+<p><strong>Clinically Meaningful Change</strong>:
+- <strong>Minimal</strong>: 1 point (10% reduction)
+- <strong>Moderate</strong>: 2 points (20-30% reduction)
+- <strong>Substantial</strong>: 3+ points (30%+ reduction)</p>
+<p><strong>Psychometric Properties</strong>:
+- <strong>Reliability</strong>: Cronbach’s α = 0.80-0.95
+- <strong>Validity</strong>: Correlates with other pain measures (r = 0.60-0.80)
+- <strong>Responsiveness</strong>: Sensitive to treatment effects (SRM = 0.5-0.8)
+- <strong>Languages</strong>: Translated and validated in 50+ languages</p>
+<p><strong>PMSG Implementation</strong>:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="background.html#cb12-1" tabindex="-1"></a><span class="co"># Automatic BPI scoring in PMSG platform</span></span>
+<span id="cb12-2"><a href="background.html#cb12-2" tabindex="-1"></a><span class="kw">def</span> calculate_bpi_scores(bpi_data):</span>
+<span id="cb12-3"><a href="background.html#cb12-3" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb12-4"><a href="background.html#cb12-4" tabindex="-1"></a><span class="co">    Calculate BPI composite scores with validation.</span></span>
+<span id="cb12-5"><a href="background.html#cb12-5" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb12-6"><a href="background.html#cb12-6" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb12-7"><a href="background.html#cb12-7" tabindex="-1"></a><span class="co">        bpi_data: Dict with pain_questions and interference_questions</span></span>
+<span id="cb12-8"><a href="background.html#cb12-8" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb12-9"><a href="background.html#cb12-9" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb12-10"><a href="background.html#cb12-10" tabindex="-1"></a><span class="co">        Dict with PSS, PIS, severity_index, and clinical_category</span></span>
+<span id="cb12-11"><a href="background.html#cb12-11" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb12-12"><a href="background.html#cb12-12" tabindex="-1"></a>    <span class="co"># Extract and validate</span></span>
+<span id="cb12-13"><a href="background.html#cb12-13" tabindex="-1"></a>    pain_items <span class="op">=</span> bpi_data[<span class="st">&#39;pain_questions&#39;</span>]  <span class="co"># 4 items</span></span>
+<span id="cb12-14"><a href="background.html#cb12-14" tabindex="-1"></a>    interference_items <span class="op">=</span> bpi_data[<span class="st">&#39;interference_questions&#39;</span>]  <span class="co"># 7 items</span></span>
+<span id="cb12-15"><a href="background.html#cb12-15" tabindex="-1"></a>    </span>
+<span id="cb12-16"><a href="background.html#cb12-16" tabindex="-1"></a>    <span class="co"># Calculate scores</span></span>
+<span id="cb12-17"><a href="background.html#cb12-17" tabindex="-1"></a>    pss <span class="op">=</span> np.mean(pain_items)</span>
+<span id="cb12-18"><a href="background.html#cb12-18" tabindex="-1"></a>    pis <span class="op">=</span> np.mean(interference_items)</span>
+<span id="cb12-19"><a href="background.html#cb12-19" tabindex="-1"></a>    severity_index <span class="op">=</span> (pss <span class="op">+</span> pis) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb12-20"><a href="background.html#cb12-20" tabindex="-1"></a>    </span>
+<span id="cb12-21"><a href="background.html#cb12-21" tabindex="-1"></a>    <span class="co"># Clinical categorization</span></span>
+<span id="cb12-22"><a href="background.html#cb12-22" tabindex="-1"></a>    <span class="cf">if</span> pss <span class="op">&lt;</span> <span class="dv">4</span>:</span>
+<span id="cb12-23"><a href="background.html#cb12-23" tabindex="-1"></a>        pain_category <span class="op">=</span> <span class="st">&quot;Mild&quot;</span></span>
+<span id="cb12-24"><a href="background.html#cb12-24" tabindex="-1"></a>    <span class="cf">elif</span> pss <span class="op">&lt;</span> <span class="dv">7</span>:</span>
+<span id="cb12-25"><a href="background.html#cb12-25" tabindex="-1"></a>        pain_category <span class="op">=</span> <span class="st">&quot;Moderate&quot;</span></span>
+<span id="cb12-26"><a href="background.html#cb12-26" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb12-27"><a href="background.html#cb12-27" tabindex="-1"></a>        pain_category <span class="op">=</span> <span class="st">&quot;Severe&quot;</span></span>
+<span id="cb12-28"><a href="background.html#cb12-28" tabindex="-1"></a>        </span>
+<span id="cb12-29"><a href="background.html#cb12-29" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb12-30"><a href="background.html#cb12-30" tabindex="-1"></a>        <span class="st">&#39;pain_severity_score&#39;</span>: <span class="bu">round</span>(pss, <span class="dv">2</span>),</span>
+<span id="cb12-31"><a href="background.html#cb12-31" tabindex="-1"></a>        <span class="st">&#39;pain_interference_score&#39;</span>: <span class="bu">round</span>(pis, <span class="dv">2</span>),</span>
+<span id="cb12-32"><a href="background.html#cb12-32" tabindex="-1"></a>        <span class="st">&#39;severity_index&#39;</span>: <span class="bu">round</span>(severity_index, <span class="dv">2</span>),</span>
+<span id="cb12-33"><a href="background.html#cb12-33" tabindex="-1"></a>        <span class="st">&#39;pain_category&#39;</span>: pain_category,</span>
+<span id="cb12-34"><a href="background.html#cb12-34" tabindex="-1"></a>        <span class="st">&#39;clinical_significance&#39;</span>: determine_clinical_significance(pss, pis)</span>
+<span id="cb12-35"><a href="background.html#cb12-35" tabindex="-1"></a>    }</span></code></pre></div>
+</div>
+<div id="oswestry-disability-index-odi" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Oswestry Disability Index (ODI)<a href="background.html#oswestry-disability-index-odi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The ODI is the gold standard for assessing low back pain-related disability <span class="citation">(<a href="#ref-Fairbank2000">Fairbank and Pynsent 2000</a>)</span>.</p>
+<p><strong>Structure</strong>:
+- <strong>10 Sections</strong>: Pain intensity, personal care, lifting, walking, sitting, standing, sleeping, sex life, social life, traveling
+- <strong>6 Levels per Section</strong>: 0 (no disability) to 5 (maximum disability)
+- <strong>Total Score</strong>: 0-50 (raw) or 0-100 (percentage)</p>
+<p><strong>Scoring</strong>:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="background.html#cb13-1" tabindex="-1"></a><span class="co"># Sum all section scores</span></span>
+<span id="cb13-2"><a href="background.html#cb13-2" tabindex="-1"></a>raw_score <span class="ot">=</span> <span class="fu">sum</span>(section_1, section_2, ..., section_10)</span>
+<span id="cb13-3"><a href="background.html#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="background.html#cb13-4" tabindex="-1"></a><span class="co"># Convert to percentage</span></span>
+<span id="cb13-5"><a href="background.html#cb13-5" tabindex="-1"></a>odi_percentage <span class="ot">=</span> (raw_score <span class="sc">/</span> <span class="dv">50</span>) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb13-6"><a href="background.html#cb13-6" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="background.html#cb13-7" tabindex="-1"></a><span class="co"># Alternative if section missing</span></span>
+<span id="cb13-8"><a href="background.html#cb13-8" tabindex="-1"></a><span class="cf">if</span> (missing_sections <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb13-9"><a href="background.html#cb13-9" tabindex="-1"></a>  odi_percentage <span class="ot">=</span> (raw_score <span class="sc">/</span> (<span class="dv">50</span> <span class="sc">-</span> missing_sections<span class="sc">*</span><span class="dv">5</span>)) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb13-10"><a href="background.html#cb13-10" tabindex="-1"></a>}</span></code></pre></div>
+<p><strong>Interpretation</strong>:
+- <strong>0-20%</strong>: Minimal disability
+- <strong>21-40%</strong>: Moderate disability
+- <strong>41-60%</strong>: Severe disability
+- <strong>61-80%</strong>: Crippled
+- <strong>81-100%</strong>: Bed-bound or exaggerating</p>
+<p><strong>Clinically Meaningful Change</strong>:
+- <strong>Minimum Detectable Change (MDC)</strong>: 10 points
+- <strong>Minimal Clinically Important Difference (MCID)</strong>: 10-15 points
+- <strong>Substantial Clinical Benefit</strong>: 20+ points</p>
+<p><strong>Psychometric Properties</strong>:
+- <strong>Reliability</strong>: ICC = 0.84-0.99 (excellent test-retest)
+- <strong>Internal Consistency</strong>: Cronbach’s α = 0.71-0.87
+- <strong>Validity</strong>: Strong correlation with other disability measures
+- <strong>Sensitivity</strong>: Effect size of 0.78 for surgical interventions</p>
+<p><strong>PMSG Implementation</strong>:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="background.html#cb14-1" tabindex="-1"></a><span class="kw">def</span> calculate_odi_score(odi_data):</span>
+<span id="cb14-2"><a href="background.html#cb14-2" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb14-3"><a href="background.html#cb14-3" tabindex="-1"></a><span class="co">    Calculate ODI with proper handling of missing data.</span></span>
+<span id="cb14-4"><a href="background.html#cb14-4" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb14-5"><a href="background.html#cb14-5" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb14-6"><a href="background.html#cb14-6" tabindex="-1"></a><span class="co">        odi_data: Dict with 10 section scores (0-5 each)</span></span>
+<span id="cb14-7"><a href="background.html#cb14-7" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb14-8"><a href="background.html#cb14-8" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb14-9"><a href="background.html#cb14-9" tabindex="-1"></a><span class="co">        Dict with raw_score, percentage, and disability_category</span></span>
+<span id="cb14-10"><a href="background.html#cb14-10" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb14-11"><a href="background.html#cb14-11" tabindex="-1"></a>    <span class="co"># Handle missing sections</span></span>
+<span id="cb14-12"><a href="background.html#cb14-12" tabindex="-1"></a>    valid_sections <span class="op">=</span> [s <span class="cf">for</span> s <span class="kw">in</span> odi_data[<span class="st">&#39;sections&#39;</span>] <span class="cf">if</span> s <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>]</span>
+<span id="cb14-13"><a href="background.html#cb14-13" tabindex="-1"></a>    </span>
+<span id="cb14-14"><a href="background.html#cb14-14" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(valid_sections) <span class="op">&lt;</span> <span class="dv">8</span>:</span>
+<span id="cb14-15"><a href="background.html#cb14-15" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;Minimum 8 of 10 sections required&quot;</span>)</span>
+<span id="cb14-16"><a href="background.html#cb14-16" tabindex="-1"></a>    </span>
+<span id="cb14-17"><a href="background.html#cb14-17" tabindex="-1"></a>    <span class="co"># Calculate scores</span></span>
+<span id="cb14-18"><a href="background.html#cb14-18" tabindex="-1"></a>    raw_score <span class="op">=</span> <span class="bu">sum</span>(valid_sections)</span>
+<span id="cb14-19"><a href="background.html#cb14-19" tabindex="-1"></a>    max_possible <span class="op">=</span> <span class="bu">len</span>(valid_sections) <span class="op">*</span> <span class="dv">5</span></span>
+<span id="cb14-20"><a href="background.html#cb14-20" tabindex="-1"></a>    percentage <span class="op">=</span> (raw_score <span class="op">/</span> max_possible) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb14-21"><a href="background.html#cb14-21" tabindex="-1"></a>    </span>
+<span id="cb14-22"><a href="background.html#cb14-22" tabindex="-1"></a>    <span class="co"># Categorize disability level</span></span>
+<span id="cb14-23"><a href="background.html#cb14-23" tabindex="-1"></a>    <span class="cf">if</span> percentage <span class="op">&lt;=</span> <span class="dv">20</span>:</span>
+<span id="cb14-24"><a href="background.html#cb14-24" tabindex="-1"></a>        category <span class="op">=</span> <span class="st">&quot;Minimal&quot;</span></span>
+<span id="cb14-25"><a href="background.html#cb14-25" tabindex="-1"></a>    <span class="cf">elif</span> percentage <span class="op">&lt;=</span> <span class="dv">40</span>:</span>
+<span id="cb14-26"><a href="background.html#cb14-26" tabindex="-1"></a>        category <span class="op">=</span> <span class="st">&quot;Moderate&quot;</span></span>
+<span id="cb14-27"><a href="background.html#cb14-27" tabindex="-1"></a>    <span class="cf">elif</span> percentage <span class="op">&lt;=</span> <span class="dv">60</span>:</span>
+<span id="cb14-28"><a href="background.html#cb14-28" tabindex="-1"></a>        category <span class="op">=</span> <span class="st">&quot;Severe&quot;</span></span>
+<span id="cb14-29"><a href="background.html#cb14-29" tabindex="-1"></a>    <span class="cf">elif</span> percentage <span class="op">&lt;=</span> <span class="dv">80</span>:</span>
+<span id="cb14-30"><a href="background.html#cb14-30" tabindex="-1"></a>        category <span class="op">=</span> <span class="st">&quot;Crippled&quot;</span></span>
+<span id="cb14-31"><a href="background.html#cb14-31" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb14-32"><a href="background.html#cb14-32" tabindex="-1"></a>        category <span class="op">=</span> <span class="st">&quot;Bed-bound/Exaggerating&quot;</span></span>
+<span id="cb14-33"><a href="background.html#cb14-33" tabindex="-1"></a>        </span>
+<span id="cb14-34"><a href="background.html#cb14-34" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb14-35"><a href="background.html#cb14-35" tabindex="-1"></a>        <span class="st">&#39;raw_score&#39;</span>: raw_score,</span>
+<span id="cb14-36"><a href="background.html#cb14-36" tabindex="-1"></a>        <span class="st">&#39;max_possible&#39;</span>: max_possible,</span>
+<span id="cb14-37"><a href="background.html#cb14-37" tabindex="-1"></a>        <span class="st">&#39;odi_percentage&#39;</span>: <span class="bu">round</span>(percentage, <span class="dv">1</span>),</span>
+<span id="cb14-38"><a href="background.html#cb14-38" tabindex="-1"></a>        <span class="st">&#39;disability_category&#39;</span>: category,</span>
+<span id="cb14-39"><a href="background.html#cb14-39" tabindex="-1"></a>        <span class="st">&#39;sections_completed&#39;</span>: <span class="bu">len</span>(valid_sections)</span>
+<span id="cb14-40"><a href="background.html#cb14-40" tabindex="-1"></a>    }</span></code></pre></div>
+</div>
+<div id="other-common-measures" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Other Common Measures<a href="background.html#other-common-measures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Pain Catastrophizing Scale (PCS)</strong>:
+- 13 items assessing rumination, magnification, helplessness
+- Score 0-52 (&gt;30 indicates clinically significant catastrophizing)
+- Strong predictor of treatment outcome</p>
+<p><strong>Tampa Scale for Kinesiophobia (TSK)</strong>:
+- 17 items assessing fear of movement/reinjury
+- Score 17-68 (&gt;37 indicates high fear-avoidance)
+- Targets for behavioral interventions</p>
+<p><strong>Patient Global Impression of Change (PGIC)</strong>:
+- Single item: “Overall, how much has your pain changed?”
+- 7-point scale (very much worse to very much improved)
+- Anchors other outcome measures</p>
+<p><strong>SF-36 / SF-12 (Short Form Health Survey)</strong>:
+- Generic health-related quality of life
+- 8 domains: physical functioning, role limitations, pain, general health, vitality, social functioning, emotional role, mental health
+- Enables comparison across conditions</p>
+<p><strong>PROMIS (Patient-Reported Outcomes Measurement Information System)</strong>:
+- Modern item response theory-based measures
+- Computer adaptive testing (CAT)
+- Multiple domains: pain intensity, pain interference, physical function, depression, anxiety
+- Growing adoption in clinical research</p>
+</div>
+</div>
+<div id="program-models-and-formats" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Program Models and Formats<a href="background.html#program-models-and-formats" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>MPPs vary in intensity, duration, and delivery format.</p>
+<div id="intensive-inpatient-programs" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Intensive Inpatient Programs<a href="background.html#intensive-inpatient-programs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Characteristics</strong>:
+- 3-4 weeks residential
+- 40-50 hours/week treatment
+- Highly structured schedule
+- Immersive environment</p>
+<p><strong>Advantages</strong>:
+- Rapid improvement
+- Complete focus on recovery
+- Removal from pain-maintaining environment
+- Intensive monitoring</p>
+<p><strong>Disadvantages</strong>:
+- High cost ($15,000-30,000)
+- Work/family disruption
+- Limited geographic availability
+- Transition challenges to home environment</p>
+<p><strong>Typical Candidates</strong>:
+- Severe, chronic, treatment-refractory pain
+- High disability levels (ODI &gt; 60%)
+- Significant psychological comorbidity
+- Failed outpatient treatment</p>
+</div>
+<div id="intensive-outpatient-programs" class="section level3 hasAnchor" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Intensive Outpatient Programs<a href="background.html#intensive-outpatient-programs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Characteristics</strong>:
+- 2-4 weeks duration
+- 20-30 hours/week
+- Daily attendance
+- Return home evenings</p>
+<p><strong>Advantages</strong>:
+- Lower cost than inpatient
+- Maintain family connections
+- Practice skills in real environment
+- Easier access</p>
+<p><strong>Disadvantages</strong>:
+- Transportation requirements
+- Ongoing exposure to stressors
+- Less intensive monitoring
+- Requires stable home situation</p>
+<p><strong>Typical Candidates</strong>:
+- Moderate-severe pain
+- Moderate disability (ODI 40-60%)
+- Stable living situation
+- Reliable transportation</p>
+</div>
+<div id="standard-outpatient-programs" class="section level3 hasAnchor" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> Standard Outpatient Programs<a href="background.html#standard-outpatient-programs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Characteristics</strong>:
+- 6-12 weeks duration
+- 6-12 hours/week
+- 2-3 sessions per week
+- Integrated with normal activities</p>
+<p><strong>Advantages</strong>:
+- Most affordable
+- Flexible scheduling
+- Gradual skill building
+- Real-world application</p>
+<p><strong>Disadvantages</strong>:
+- Slower progress
+- Less intensive support
+- Competing demands
+- Requires strong motivation</p>
+<p><strong>Typical Candidates</strong>:
+- Mild-moderate pain
+- Lower disability (ODI &lt; 40%)
+- Working individuals
+- Strong family support</p>
+</div>
+<div id="telehealth-and-hybrid-models" class="section level3 hasAnchor" number="2.4.4">
+<h3><span class="header-section-number">2.4.4</span> Telehealth and Hybrid Models<a href="background.html#telehealth-and-hybrid-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Emerging Approaches</strong>:
+- Video group sessions
+- Mobile app support
+- Remote monitoring
+- Hybrid in-person/virtual</p>
+<p><strong>Evidence Base</strong>:
+- Comparable outcomes to in-person <span class="citation">(<a href="#ref-Eccleston2014">Eccleston et al. 2014</a>)</span>
+- High satisfaction rates
+- Improved access for rural patients
+- Cost-effective delivery</p>
+<p><strong>PMSG Enablement</strong>:
+- Platform supports all delivery models
+- Assessment administration regardless of location
+- Real-time monitoring across settings
+- Consistent data regardless of format</p>
+</div>
+</div>
+<div id="key-takeaways" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Key Takeaways<a href="background.html#key-takeaways" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>Chronic pain is a major public health crisis</strong> affecting 100 million Americans at a cost exceeding $600 billion annually.</p></li>
+<li><p><strong>Multidisciplinary pain programs are evidence-based</strong> with Level 1 evidence showing medium-to-large effects on pain, function, and return-to-work.</p></li>
+<li><p><strong>The biopsychosocial model is essential</strong> - single-modality treatment is insufficient for complex chronic pain.</p></li>
+<li><p><strong>Standardized assessment instruments enable quality measurement</strong> - BPI and ODI are validated, reliable tools with established MCID values.</p></li>
+<li><p><strong>Implementation barriers are significant</strong> - the PMSG platform addresses data collection, coordination, and documentation challenges.</p></li>
+<li><p><strong>Multiple program formats exist</strong> - from intensive inpatient to outpatient to telehealth, all requiring robust data infrastructure.</p></li>
+</ol>
+<p>With this clinical foundation established, we’ll explore the PMSG platform architecture in Chapter 3.</p>
+</div>
+<div id="references-1" class="section level2 unnumbered hasAnchor">
+<h2>References<a href="background.html#references-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="refs-background">
+
+</div>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Cleeland1994" class="csl-entry">
+Cleeland, Charles S, and Katherine M Ryan. 1994. <span>“Pain Assessment: Global Use of the Brief Pain Inventory.”</span> <em>Annals of the Academy of Medicine, Singapore</em> 23 (2): 129–38.
+</div>
+<div id="ref-Eccleston2014" class="csl-entry">
+Eccleston, Christopher, Emma Fisher, Louise Craig, Gerard B Duggan, Beth A Rosser, and Edmund Keogh. 2014. <span>“Delivering Interventions for Adults with Chronic Pain over the Internet: A Systematic Review and Meta-Analysis.”</span> <em>Pain</em> 155 (10): 1935–45.
+</div>
+<div id="ref-Fairbank2000" class="csl-entry">
+Fairbank, Jeremy CT, and Paul B Pynsent. 2000. <span>“The Oswestry Disability Index.”</span> <em>Spine</em> 25 (22): 2940–53.
+</div>
+<div id="ref-Gatchel2014" class="csl-entry">
+Gatchel, Robert J, Donald D McGeary, Cindy A McGeary, and Brian Lippe. 2014. <span>“Interdisciplinary Chronic Pain Management: Past, Present, and Future.”</span> <em>American Psychologist</em> 69 (2): 119–30.
+</div>
+<div id="ref-Gatchel2007" class="csl-entry">
+Gatchel, Robert J, Yuan Bo Peng, Madelon L Peters, Perry N Fuchs, and Dennis C Turk. 2007. <span>“The Biopsychosocial Approach to Chronic Pain: Scientific Advances and Future Directions.”</span> <em>Psychological Bulletin</em> 133 (4): 581.
+</div>
+<div id="ref-Goldberg2011" class="csl-entry">
+Goldberg, Debra S, and Summer J McGee. 2011. <span>“Pain as a Global Public Health Priority.”</span> <em>BMC Public Health</em> 11 (1): 1–5.
+</div>
+<div id="ref-IOM2011" class="csl-entry">
+Institute of Medicine. 2011. <span>“Relieving Pain in America: A Blueprint for Transforming Prevention, Care, Education, and Research.”</span> <em>Washington, DC: The National Academies Press</em>.
+</div>
+<div id="ref-Kamper2015" class="csl-entry">
+Kamper, Steven J, Adri T Apeldoorn, Alessandro Chiarotto, et al. 2015. <span>“Multidisciplinary Biopsychosocial Rehabilitation for Chronic Low Back Pain: Cochrane Systematic Review and Meta-Analysis.”</span> <em>Bmj</em> 350.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="architecture.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": "linkedin"
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["pmsg_platform_guide.pdf", "pmsg_platform_guide.epub", "pmsg_platform_guide.mobi"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

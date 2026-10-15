@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+node_modules/
+web/build/
+__pycache__/
+.pytest_cache/
+*.db
+.Rhistory
+.RData
+.Rproj.user/
+rsconnect/
+.firebase/
+*.log
+.DS_Store

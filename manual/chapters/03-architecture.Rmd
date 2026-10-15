@@ -1,0 +1,55 @@
+# Platform Architecture {#architecture}
+```{r}
+
+```
+
+## Overview
+
+The PMSG platform employs a modern, microservices-oriented architecture designed for scalability, maintainability, and extensibility.
+
+## Technology Stack
+
+### Frontend Stack
+- React 18.2
+- Recharts for visualizations
+- Tailwind CSS
+- JWT authentication
+
+### Backend Stack
+- FastAPI (Python 3.9+)
+- PostgreSQL 12+
+- Redis (caching)
+- Celery (async tasks)
+
+### Analytics Stack
+- R 4.0+
+- Shiny Server
+- ggplot2, plotly
+- Statistical packages (lme4, survival, etc.)
+
+### AI/ML Stack
+- ChromaDB (vector database)
+- Sentence Transformers
+- LangChain
+- Claude API
+
+## System Components
+
+[Detailed architecture content to be added]
+
+## API Design
+
+[REST API documentation to be added]
+
+## Database Schema
+
+[Entity-relationship diagrams to be added]
+
+## Security Architecture
+
+[Security implementation details to be added]
+
+## References {-}
+
+::: {#refs-architecture}
+:::

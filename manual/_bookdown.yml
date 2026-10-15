@@ -1,0 +1,55 @@
+book_filename: "pmsg_platform_guide"
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
+output_dir: "docs"
+
+rmd_files:
+  # Main technical manual structure
+  html:
+    - "index.Rmd"
+    - "chapters/01-introduction.Rmd"
+    - "chapters/02-pain-management-background.Rmd"
+    - "chapters/03-architecture.Rmd"
+    #- "chapters/04-installation-setup.Rmd"
+    # - "chapters/05-patient-registration.Rmd"
+    # - "chapters/06-clinical-dashboard.Rmd"
+    # - "chapters/07-descriptive-analytics.Rmd"
+    # - "chapters/08-statistical-analysis.Rmd"
+    # - "chapters/09-predictive-analytics.Rmd"
+    # - "chapters/10-survival-analysis.Rmd"
+    # - "chapters/11-rag-system.Rmd"
+    # - "chapters/12-report-generation.Rmd"
+    # - "chapters/13-r-shiny-suite.Rmd"
+    # - "chapters/14-data-management.Rmd"
+    # - "chapters/15-user-management.Rmd"
+    # - "chapters/16-grant-support.Rmd"
+    # - "chapters/17-publication-prep.Rmd"
+    # - "chapters/18-quality-improvement.Rmd"
+    # - "chapters/99-references.Rmd"
+  
+  # PDF version (same structure)
+  latex:
+    - "index.Rmd"
+    - "chapters/01-introduction.Rmd"
+    - "chapters/02-pain-management-background.Rmd"
+    - "chapters/03-architecture.Rmd"
+    #- "chapters/04-installation-setup.Rmd"
+    # - "chapters/05-patient-registration.Rmd"
+    # - "chapters/06-clinical-dashboard.Rmd"
+    # - "chapters/07-descriptive-analytics.Rmd"
+    # - "chapters/08-statistical-analysis.Rmd"
+    # - "chapters/09-predictive-analytics.Rmd"
+    # - "chapters/10-survival-analysis.Rmd"
+    # - "chapters/11-rag-system.Rmd"
+    # - "chapters/12-report-generation.Rmd"
+    # - "chapters/13-r-shiny-suite.Rmd"
+    # - "chapters/14-data-management.Rmd"
+    # - "chapters/15-user-management.Rmd"
+    # - "chapters/16-grant-support.Rmd"
+    # - "chapters/17-publication-prep.Rmd"
+    # - "chapters/18-quality-improvement.Rmd"
+    - "chapters/99-references.Rmd"
+  
+# Separate version configurations will be in version-specific folders

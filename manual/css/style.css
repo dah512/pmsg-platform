@@ -1,0 +1,260 @@
+/* PMSG Platform Book Custom Styles */
+
+/* Color Palette - PMSG Brand Colors */
+:root {
+  --pmsg-primary: #DC6B4A;      /* Coral - Primary */
+  --pmsg-secondary: #2C5F7C;    /* Teal Blue - Secondary */
+  --pmsg-success: #48BB78;      /* Green - Success */
+  --pmsg-warning: #F6AD55;      /* Orange - Warning */
+  --pmsg-info: #4299E1;         /* Blue - Info */
+  --pmsg-gray: #718096;         /* Gray - Text */
+  --pmsg-light: #F7FAFC;        /* Light Gray - Background */
+}
+
+/* Body and Typography */
+body {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.7;
+  color: #2D3748;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  color: var(--pmsg-secondary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: var(--pmsg-primary);
+  font-size: 2.5rem;
+  border-bottom: 3px solid var(--pmsg-primary);
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--pmsg-secondary);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--pmsg-info);
+}
+
+/* Links */
+a {
+  color: var(--pmsg-info);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--pmsg-info);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--pmsg-primary);
+  border-bottom-color: var(--pmsg-primary);
+}
+
+/* Code Blocks */
+pre {
+  background-color: #F7FAFC;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid var(--pmsg-secondary);
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+code {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  background-color: #F7FAFC;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #E53E3E;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--pmsg-secondary);
+  color: white;
+}
+
+thead th {
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody tr {
+  border-bottom: 1px solid #E2E8F0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #F7FAFC;
+}
+
+tbody tr:hover {
+  background-color: #EDF2F7;
+}
+
+tbody td {
+  padding: 0.75rem;
+}
+
+/* Blockquotes and Callouts */
+blockquote {
+  border-left: 4px solid var(--pmsg-primary);
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background-color: var(--pmsg-light);
+  font-style: italic;
+}
+
+/* Custom Callout Boxes */
+.rmdnote, .rmdtip, .rmdwarning, .rmdcaution {
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  border-left: 4px solid;
+}
+
+.rmdnote {
+  background-color: #EBF8FF;
+  border-left-color: var(--pmsg-info);
+}
+
+.rmdnote::before {
+  content: "📘 Note: ";
+  font-weight: bold;
+  color: var(--pmsg-info);
+}
+
+.rmdtip {
+  background-color: #F0FFF4;
+  border-left-color: var(--pmsg-success);
+}
+
+.rmdtip::before {
+  content: "💡 Tip: ";
+  font-weight: bold;
+  color: var(--pmsg-success);
+}
+
+.rmdwarning {
+  background-color: #FFFAF0;
+  border-left-color: var(--pmsg-warning);
+}
+
+.rmdwarning::before {
+  content: "⚠️ Warning: ";
+  font-weight: bold;
+  color: var(--pmsg-warning);
+}
+
+.rmdcaution {
+  background-color: #FFF5F5;
+  border-left-color: var(--pmsg-primary);
+}
+
+.rmdcaution::before {
+  content: "🏥 Clinical Note: ";
+  font-weight: bold;
+  color: var(--pmsg-primary);
+}
+
+/* Figure Captions */
+.caption {
+  font-style: italic;
+  color: var(--pmsg-gray);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* TOC Customization */
+.book .book-summary {
+  background-color: #F7FAFC;
+}
+
+.book .book-summary ul.summary li.active > a {
+  color: var(--pmsg-primary);
+  border-left: 4px solid var(--pmsg-primary);
+  font-weight: 600;
+}
+
+.book .book-summary ul.summary li a:hover {
+  color: var(--pmsg-secondary);
+}
+
+/* Chapter Numbers */
+.header-section-number {
+  color: var(--pmsg-primary);
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--pmsg-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--pmsg-secondary);
+}
+
+/* Footer */
+.book .book-body .page-wrapper .page-inner section.normal {
+  max-width: 800px;
+}
+
+/* Print Styles */
+@media print {
+  pre {
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  table, figure {
+    page-break-inside: avoid;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  pre {
+    font-size: 0.8rem;
+  }
+}
