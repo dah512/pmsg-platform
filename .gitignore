@@ -1,15 +1,35 @@
+# Secrets
 .env
 .env.*
 !.env.example
-node_modules/
-web/build/
+*.pem
+*service-account*.json
+
+# Python
 __pycache__/
+*.py[cod]
+.venv/
+venv/
 .pytest_cache/
 *.db
+
+# Node
+node_modules/
+web/build/
+
+# R
 .Rhistory
 .RData
 .Rproj.user/
+*.Rproj
+renv/library/
 rsconnect/
+manual/_book/
+manual/*.log
+manual/*.aux
+manual/*.tex
+
+# Firebase / OS
 .firebase/
-*.log
+firebase-debug*.log
 .DS_Store
