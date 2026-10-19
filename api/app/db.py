@@ -19,7 +19,9 @@ from sqlalchemy import (
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, relationship, sessionmaker
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./pmsg.db")
-SEED_CSV = Path(os.getenv("SEED_CSV", "/data/cohort_25.csv"))
+# Synthetic cohort shipped inside the package so the container seeds itself on
+# Cloud Run; docker-compose overrides SEED_CSV to the mounted data/ copy.
+SEED_CSV = Path(os.getenv("SEED_CSV", str(Path(__file__).resolve().parent / "seed" / "cohort_25.csv")))
 
 engine = create_engine(
     DATABASE_URL,

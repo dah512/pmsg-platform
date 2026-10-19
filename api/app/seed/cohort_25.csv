@@ -1,0 +1,26 @@
+id,name,age,gender,primary_pain_condition,medications,pain_level_nrs,sleep_hours,fatigue_level,anxiety_level,activity_limitation,consent_given,consent_date
+1,Patricia Martinez,58,Female,Chronic Low Back Pain,"Oxycodone 10mg BID, Gabapentin 300mg TID",7,5,8,6,"Difficulty standing >15 min",true,2025-12-05
+2,Robert Johnson,62,Male,Osteoarthritis Knee,"Celecoxib 200mg QD, Acetaminophen 1000mg QID",6,6,7,5,"Can't climb stairs without pain",true,2025-12-05
+3,Michelle Lee,45,Female,Fibromyalgia,"Duloxetine 60mg QD, Tramadol 50mg PRN",8,4,9,8,"Fatigue limits daily tasks",true,2025-12-05
+4,James Wilson,70,Male,Neuropathic Pain,"Pregabalin 75mg BID, Lidocaine Patch",5,5,6,4,"Burning sensation feet",true,2025-12-05
+5,Carol Taylor,55,Female,Rheumatoid Arthritis,"Methotrexate 15mg QW, Naproxen 500mg BID",7,5,8,7,"Joint stiffness morning",true,2025-12-05
+6,David Brown,65,Male,Post-Surgical Pain,"Hydrocodone/APAP 5/325mg QID, Ibuprofen 600mg TID",6,6,7,6,"Limited mobility hip",true,2025-12-05
+7,Barbara Anderson,52,Female,Chronic Headache,"Topiramate 50mg QD, Sumatriptan PRN",5,5,6,5,"Light/sound sensitivity",true,2025-12-05
+8,John Thomas,68,Male,Sciatica,"Methylprednisolone 4mg QD, Physical Therapy",7,5,8,6,"Radiating leg pain",true,2025-12-05
+9,Linda Jackson,50,Female,Complex Regional Pain Syndrome,"Gabapentin 600mg TID, Ketamine Infusion",8,4,9,8,"Swelling, color changes",true,2025-12-05
+10,William White,60,Male,Chronic Neck Pain,"Tramadol 50mg QID, Muscle Relaxant",6,5,7,5,"Headaches with neck pain",true,2025-12-05
+11,Susan Harris,55,Female,Endometriosis Pain,"Norethindrone 5mg QD, Ibuprofen 800mg TID",7,5,8,7,"Pelvic pain, bloating",true,2025-12-05
+12,Richard Martin,63,Male,Post-Herpetic Neuralgia,"Gabapentin 900mg TID, Capsaicin Cream",5,5,6,4,"Burning skin pain",true,2025-12-05
+13,Karen Thompson,48,Female,Chronic Pelvic Pain,"Amitriptyline 25mg QHS, Physical Therapy",6,5,7,6,"Pain with intercourse",true,2025-12-05
+14,Charles Garcia,67,Male,Chronic Prostatitis,"Tamsulosin 0.4mg QD, Ibuprofen 600mg TID",5,5,6,5,"Urinary frequency, pain",true,2025-12-05
+15,Deborah Robinson,53,Female,Chronic Migraine,"Erenumab 70mg SC QM, Sumatriptan PRN",7,4,8,7,"Aura, nausea, vomiting",true,2025-12-05
+16,Joseph Clark,61,Male,Chronic Pancreatitis,"Oxycodone 5mg QID, Pancreatic Enzymes",6,5,7,6,"Epigastric pain after eating",true,2025-12-05
+17,Sharon Lewis,56,Female,Chronic Sinusitis Pain,"Fluticasone Nasal Spray, Ibuprofen 600mg TID",5,5,6,5,"Facial pressure, headache",true,2025-12-05
+18,Thomas Hall,64,Male,Chronic Bursitis,"Celecoxib 200mg QD, Cortisone Injection",6,6,7,5,"Shoulder pain with movement",true,2025-12-05
+19,Rebecca Young,49,Female,Chronic Tendonitis,"Ibuprofen 800mg TID, Physical Therapy",5,5,6,4,"Pain with gripping objects",true,2025-12-05
+20,Daniel King,66,Male,Chronic Gout,"Colchicine 0.6mg QD, Allopurinol 300mg QD",7,5,8,6,"Toe joint swelling, redness",true,2025-12-05
+21,Martha Wright,57,Female,Chronic Interstitial Cystitis,"Amitriptyline 10mg QHS, Pentosan Polysulfate",6,5,7,6,"Bladder pain, urgency",true,2025-12-05
+22,Paul Scott,69,Male,Chronic Shingles Pain,"Gabapentin 1200mg TID, Lidocaine Patch",5,5,6,4,"Burning, tingling skin",true,2025-12-05
+23,Debra Green,51,Female,Chronic TMJ Disorder,"Ibuprofen 600mg TID, Bite Guard",5,5,6,5,"Jaw pain, clicking",true,2025-12-05
+24,Mark Adams,60,Male,Chronic Plantar Fasciitis,"Ibuprofen 800mg TID, Stretching Exercises",6,5,7,5,"Heel pain first steps",true,2025-12-05
+25,Julie Baker,54,Female,Chronic Myofascial Pain,"Cyclobenzaprine 10mg QID, Massage Therapy",7,5,8,7,"Muscle knots, trigger points",true,2025-12-05
